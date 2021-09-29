@@ -19,25 +19,27 @@ Frave Developer
 ---
 ### Requirements
 **Google Map API KEY**
-    -  lib/Services/GoogleServices
-    -  Android/app/src/main/AndroidManifest.xml
+-  lib/Services/GoogleServices
+-  Android/app/src/main/AndroidManifest.xml
 **MAPBOX API KEY**
-    - lib/Controller/MapBoxController
+- lib/Controller/MapBoxController
 **PUSH NOTIFICATIONS - Cloud Messaging | Firebase**
-    - lib/Services/PushNotification.dart
-        - Go Firebase
-        - Project settings
-        - Cloud Messaging
-        - Server key
+- lib/Services/PushNotification.dart
+- Go Firebase
+- Project settings
+- Cloud Messaging
+- Server key
 
 #### Flutter
-    - Flutter Bloc 
-    - Socket io client
-    - Google Map
-    - MapBox
-    - Geolocator
-    - Push notifications
+- Flutter Bloc 
+- Socket io client
+- Google Map
+- MapBox
+- Geolocator
+- Push notifications
+
 #### Nodejs
+    
 #### Mysql
 
 
