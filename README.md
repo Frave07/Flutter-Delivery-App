@@ -50,4 +50,4 @@ Frave Developer
 
 ## Screenshot
 
-<img src="./Screenshot/Delivery-Food-Brinning.png" alt="" height="36">
+<img src="./Screenshot/Delivery-Food-Brinning.png" alt="" height="100">
