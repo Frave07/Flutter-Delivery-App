@@ -18,12 +18,15 @@ Frave Developer
 
 ---
 ### Requirements
-**Google Map API KEY**
+
+#### Google Map API KEY
 -  lib/Services/GoogleServices
 -  Android/app/src/main/AndroidManifest.xml
-**MAPBOX API KEY**
+
+#### MAPBOX API KEY
 - lib/Controller/MapBoxController
-**PUSH NOTIFICATIONS - Cloud Messaging | Firebase**
+
+#### PUSH NOTIFICATIONS - Cloud Messaging | Firebase
 - lib/Services/PushNotification.dart
 - Go Firebase
 - Project settings
@@ -39,7 +42,7 @@ Frave Developer
 - Push notifications
 
 #### Nodejs
-    
+
 #### Mysql
 
 
@@ -47,8 +50,4 @@ Frave Developer
 
 ## Screenshot
 
-<table border>
-    <tr>
-        <td><img src="./Screenshot/Delivery-Food-Brinning.png" alt="" width="200"></td>
-    </tr>
-</table>
+<img src="./Screenshot/Delivery-Food-Brinning.png" alt="" height="36">
