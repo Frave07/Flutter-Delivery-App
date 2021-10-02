@@ -51,4 +51,4 @@ Frave Developer
 
 ## Screenshot
 
-<img src="https://github.com/Frave07/Flutter-Delivery-App/blob/main/screenshot/Delivery-Food-Brinning.png" height="36" />
+<img src="https://github.com/Frave07/Flutter-Delivery-App/blob/main/screenshot/Delivery-Food-Brinning.png" height="100" />
