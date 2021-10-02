@@ -13,8 +13,7 @@ Frave Developer
 <a href="https://www.instagram.com/frave_developer"><img src="https://github.com/aritraroy/social-icons/blob/master/instagram-icon.png?raw=true" width="50"></a>
 
 ### Donate
-<a href="https://www.buymeacoffee.com/frave"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="100"></a>
-<a href="https://www.paypal.me/Fpereza"><img src="https://img.flaticon.com/icons/png/512/888/888870.png" width="80"></a>
+<a href="https://www.buymeacoffee.com/frave"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="150"></a>
 
 ---
 ### Requirements
