@@ -18,15 +18,19 @@ Frave Developer
 ---
 ### Requirements
 
+#### Change IP
+ - Lib/Services/url.dart
+
 #### Google Map API KEY
--  lib/Services/GoogleServices
--  Android/app/src/main/AndroidManifest.xml
+-  Page API KEY => lib/Services/GoogleServices
+-  Page API KEY => Android/app/src/main/AndroidManifest.xml
 
 #### MAPBOX API KEY
-- lib/Controller/MapBoxController
+- Page API KEY => lib/Controller/MapBoxController
 
 #### PUSH NOTIFICATIONS - Cloud Messaging | Firebase
-- lib/Services/PushNotification.dart
+- Page Server Key => lib/Services/PushNotification.dart
+- Page google-services.json => Android/App/
 - Go Firebase
 - Project settings
 - Cloud Messaging
