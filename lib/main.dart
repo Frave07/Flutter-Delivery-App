@@ -70,7 +70,7 @@ class _MyAppState extends State<MyApp> {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Food - Frave Developer',
+        title: 'Food - Fraved',
         home: CheckingLoginPage(),
       ),
     );

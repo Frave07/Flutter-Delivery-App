@@ -4,7 +4,6 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:meta/meta.dart';
 
 part 'payments_event.dart';
 part 'payments_state.dart';

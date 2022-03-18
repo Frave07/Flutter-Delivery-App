@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:restaurant/Helpers/validate_form.dart';
 import 'package:restaurant/Screen/Login/CheckEmailPage.dart';

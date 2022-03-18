@@ -159,7 +159,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                       validator: (val){
                         if( val != _newPasswordController.text ){
                           return 'Passwords do not match';
-                        } else if ( val!.isEmpty ){
+                        } else{
                           return 'Repeat password is required';
                         }
                       },

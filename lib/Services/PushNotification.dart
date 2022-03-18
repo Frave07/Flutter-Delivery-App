@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:http/http.dart' as http;
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -15,7 +14,6 @@ class PushNotification {
     channel = const AndroidNotificationChannel(
       'high_importance_channel', 
       'High Importance Notifications', 
-      'This channel is used for important notifications',
       importance: Importance.high
     );
 
@@ -54,7 +52,6 @@ class PushNotification {
             android: AndroidNotificationDetails(
               channel.id, 
               channel.name, 
-              channel.description,
               icon: 'launch_background'
             )
           )

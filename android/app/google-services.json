@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "950821146407",
-    "project_id": "delivery-flutter-a8e4c",
-    "storage_bucket": "delivery-flutter-a8e4c.appspot.com"
+    "project_number": "556071861146",
+    "project_id": "delivery-app-19b87",
+    "storage_bucket": "delivery-app-19b87.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:950821146407:android:b7359cd1b6ba5619eb2302",
+        "mobilesdk_app_id": "1:556071861146:android:adbd8966f7a9d1b5701823",
         "android_client_info": {
-          "package_name": "com.example.restaurant"
+          "package_name": "com.fraved.restaurant"
         }
       },
       "oauth_client": [
         {
-          "client_id": "950821146407-acoh9s5ab6p0gd732ntlg9u1unc8e7po.apps.googleusercontent.com",
+          "client_id": "556071861146-vftp91vq78uh2n7h759sjch5kbbsos4d.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCeIvHiY-g1of-8hOGPcdbXP26dtcnPGiM"
+          "current_key": "AIzaSyC7px3WD9Rs0_SoawbS_mlVgGZ1XYobnt0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "950821146407-acoh9s5ab6p0gd732ntlg9u1unc8e7po.apps.googleusercontent.com",
+              "client_id": "556071861146-vftp91vq78uh2n7h759sjch5kbbsos4d.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
