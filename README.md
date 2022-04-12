@@ -14,7 +14,7 @@ Frave Developer
 ### Donate
 <a href="https://www.buymeacoffee.com/frave"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="170"></a>
 <a href="https://www.paypal.me/Fpereza"><img src="https://cdn.svgporn.com/logos/paypal.svg" width="50"></a>
-
+<a>[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I1C3R4S)</a>
 ---
 ### Requirements
 
