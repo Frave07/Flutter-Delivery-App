@@ -4,6 +4,7 @@ attr activityName
 attr alpha
 attr alwaysExpand
 attr ambientEnabled
+attr backgroundColor
 attr buttonSize
 attr cameraBearing
 attr cameraMaxZoomPreference
@@ -35,6 +36,7 @@ attr latLngBoundsNorthEastLongitude
 attr latLngBoundsSouthWestLatitude
 attr latLngBoundsSouthWestLongitude
 attr liteMode
+attr mapId
 attr mapType
 attr nestedScrollViewStyle
 attr placeholderActivityName
@@ -72,7 +74,6 @@ color common_google_signin_btn_text_light_disabled
 color common_google_signin_btn_text_light_focused
 color common_google_signin_btn_text_light_pressed
 color common_google_signin_btn_tint
-color fcm_test_color
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
@@ -105,9 +106,6 @@ dimen subtitle_corner_radius
 dimen subtitle_outline_width
 dimen subtitle_shadow_offset
 dimen subtitle_shadow_radius
-drawable adaptive_icon
-drawable adaptive_icon_background
-drawable adaptive_icon_foreground
 drawable bg_color
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
@@ -128,11 +126,8 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
-drawable gcm_icon
-drawable gcm_icon2
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
-drawable icon_with_gradient
 drawable launch_background
 drawable notification_action_background
 drawable notification_bg
@@ -260,7 +255,7 @@ layout notification_template_part_chronometer
 layout notification_template_part_time
 mipmap ic_launcher
 mipmap splash
-raw gcm_bip
+raw keep
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
@@ -280,9 +275,7 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string default_web_client_id
-string fcm_2_args
 string fcm_fallback_notification_channel_label
-string fcm_no_args
 string gcm_defaultSenderId
 string google_api_key
 string google_app_id
@@ -313,7 +306,7 @@ styleable FontFamilyFont android_font android_fontWeight android_fontStyle andro
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable LoadingImageView circleCrop imageAspectRatio imageAspectRatioAdjust
-styleable MapAttrs ambientEnabled cameraBearing cameraMaxZoomPreference cameraMinZoomPreference cameraTargetLat cameraTargetLng cameraTilt cameraZoom latLngBoundsNorthEastLatitude latLngBoundsNorthEastLongitude latLngBoundsSouthWestLatitude latLngBoundsSouthWestLongitude liteMode mapType uiCompass uiMapToolbar uiRotateGestures uiScrollGestures uiScrollGesturesDuringRotateOrZoom uiTiltGestures uiZoomControls uiZoomGestures useViewLifecycle zOrderOnTop
+styleable MapAttrs ambientEnabled backgroundColor cameraBearing cameraMaxZoomPreference cameraMinZoomPreference cameraTargetLat cameraTargetLng cameraTilt cameraZoom latLngBoundsNorthEastLatitude latLngBoundsNorthEastLongitude latLngBoundsSouthWestLatitude latLngBoundsSouthWestLongitude liteMode mapId mapType uiCompass uiMapToolbar uiRotateGestures uiScrollGestures uiScrollGesturesDuringRotateOrZoom uiTiltGestures uiZoomControls uiZoomGestures useViewLifecycle zOrderOnTop
 styleable SignInButton buttonSize colorScheme scopeUris
 styleable SplitPairFilter primaryActivityName secondaryActivityAction secondaryActivityName
 styleable SplitPairRule clearTop finishPrimaryWithSecondary finishSecondaryWithPrimary splitLayoutDirection splitMinSmallestWidth splitMinWidth splitRatio
