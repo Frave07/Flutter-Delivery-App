@@ -10,7 +10,7 @@ void modalActiveOrInactiveProduct(BuildContext context, int status, String nameP
     builder: (context) 
       => AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
-        content: Container(
+        content: SizedBox(
           height: 155,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -19,19 +19,19 @@ void modalActiveOrInactiveProduct(BuildContext context, int status, String nameP
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
-                    children: [
+                    children: const [
                       TextFrave(text: 'Frave ', color: ColorsFrave.primaryColor, fontWeight: FontWeight.w500 ),
                       TextFrave(text: 'Food', fontWeight: FontWeight.w500),
                     ],
                   ),
                   InkWell(
                     onTap: () => Navigator.pop(context),
-                    child: Icon(Icons.close)
+                    child: const Icon(Icons.close)
                   )
                 ],
               ),
-              Divider(),
-              SizedBox(height: 10.0),
+              const Divider(),
+              const SizedBox(height: 10.0),
               Row(
                 children: [
                   Container(
@@ -44,14 +44,14 @@ void modalActiveOrInactiveProduct(BuildContext context, int status, String nameP
                       )
                     ),
                   ),
-                  SizedBox(width: 10.0),
+                  const SizedBox(width: 10.0),
                   TextFrave(
                     text: nameProduct,
                     maxLine: 2,
                   ),
                 ],
               ),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               BtnFrave(
                 height: 45,
                 text: (status == 1) ? 'SOLD OUT' : 'IN STOCK',

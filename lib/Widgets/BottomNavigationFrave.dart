@@ -18,7 +18,7 @@ class BottomNavigationFrave extends StatelessWidget {
   {
     return Container(
       height: 55,
-      padding: EdgeInsets.symmetric(horizontal: 20.0),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [
@@ -77,7 +77,7 @@ class _ItemButton extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 7.0),
+        padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 7.0),
         decoration: BoxDecoration(
           color: ( i == index ) ? ColorsFrave.primaryColor.withOpacity(.9) : Colors.transparent,
           borderRadius: BorderRadius.circular(15.0)
@@ -86,7 +86,7 @@ class _ItemButton extends StatelessWidget {
           ? Row(
             children: [
                 Icon(iconData, color: Colors.white, size: 25),
-                SizedBox(width: 6.0),
+                const SizedBox(width: 6.0),
                 TextFrave(text: text, fontSize: 17, color: Colors.white, fontWeight: FontWeight.w500 )
               ],
             )

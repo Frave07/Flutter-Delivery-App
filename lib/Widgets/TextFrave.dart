@@ -1,7 +1,7 @@
 part of 'Widgets.dart';
 
-class TextFrave extends StatelessWidget
-{
+class TextFrave extends StatelessWidget{
+  
   final String text;
   final double fontSize;
   final Color color;
@@ -21,8 +21,7 @@ class TextFrave extends StatelessWidget
   });
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context){
     return Text(
       text,
       overflow: textOverflow,

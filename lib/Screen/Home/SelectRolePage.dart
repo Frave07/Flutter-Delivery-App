@@ -26,14 +26,14 @@ class SelectRolePage extends StatelessWidget {
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: const [
                   TextFrave(text: 'Frave ', fontSize: 25, color: ColorsFrave.primaryColor, fontWeight: FontWeight.w500 ),
                   TextFrave(text: 'Food', fontSize: 25, color: ColorsFrave.secundaryColor, fontWeight: FontWeight.w500 ),
                 ],
               ),
-              SizedBox(height: 20.0),
-              TextFrave(text: 'How do you want to continue?', color: ColorsFrave.secundaryColor, fontSize: 25,),
-              SizedBox(height: 30.0),
+              const SizedBox(height: 20.0),
+              const TextFrave(text: 'How do you want to continue?', color: ColorsFrave.secundaryColor, fontSize: 25,),
+              const SizedBox(height: 30.0),
               ( authBloc.user!.rolId == 1) 
                 ? _BtnRol(
                 svg: 'Assets/svg/restaurante.svg',
@@ -41,7 +41,7 @@ class SelectRolePage extends StatelessWidget {
                 color1: ColorsFrave.primaryColor.withOpacity(.2),
                 color2: Colors.greenAccent.withOpacity(.1),
                 onPressed: () => Navigator.pushAndRemoveUntil(context, routeFrave(page: AdminHomePage()), (route) => false),
-              ) : Container(),
+              ) : const SizedBox(),
               (authBloc.user!.rolId == 1 || authBloc.user!.rolId == 3 )
                 ? _BtnRol(
                 svg: 'Assets/svg/bussiness-man.svg',
@@ -49,7 +49,7 @@ class SelectRolePage extends StatelessWidget {
                 color1: Color(0xffFE6488).withOpacity(.2),
                 color2: Colors.amber.withOpacity(.1),
                 onPressed: () => Navigator.pushReplacement(context, routeFrave(page: ClientHomePage())),
-              ) : Container() ,
+              ) : const SizedBox() ,
               (authBloc.user!.rolId == 1 || authBloc.user!.rolId == 3 ) 
                 ? _BtnRol(
                 svg: 'Assets/svg/delivery-bike.svg',
@@ -57,7 +57,7 @@ class SelectRolePage extends StatelessWidget {
                 color1: Color(0xff8956FF).withOpacity(.2),
                 color2: Colors.purpleAccent.withOpacity(.1),
                 onPressed: () => Navigator.pushAndRemoveUntil(context, routeFrave(page: DeliveryHomePage()), (route) => false),
-              ) : Container()
+              ) : const SizedBox()
             ],
           ),
         ),

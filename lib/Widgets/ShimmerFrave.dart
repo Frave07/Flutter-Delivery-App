@@ -2,6 +2,8 @@ part of 'Widgets.dart';
 
 class ShimmerFrave extends StatelessWidget {
 
+  const ShimmerFrave({Key? key}):super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Shimmer.fromColors(

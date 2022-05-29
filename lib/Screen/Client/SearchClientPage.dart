@@ -37,8 +37,8 @@ class _SearchClientPageState extends State<SearchClientPage> {
 
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context){
+
     final productBloc = BlocProvider.of<ProductsBloc>(context);
 
     return Scaffold(
@@ -57,7 +57,7 @@ class _SearchClientPageState extends State<SearchClientPage> {
                       child: Icon(Icons.arrow_back_ios_new_rounded),
                     ),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
@@ -74,7 +74,7 @@ class _SearchClientPageState extends State<SearchClientPage> {
                         },
                         decoration: InputDecoration(
                           border: InputBorder.none,
-                          prefixIcon: Icon(Icons.search),
+                          prefixIcon: const Icon(Icons.search),
                           hintText: 'Search products',
                           hintStyle: GoogleFonts.getFont('Inter', color: Colors.grey)
                         ),
@@ -83,7 +83,7 @@ class _SearchClientPageState extends State<SearchClientPage> {
                   ),
                 ],
               ),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               BlocBuilder<ProductsBloc, ProductsState>(
                 builder: (_, state) 
                   => Expanded(
@@ -161,14 +161,14 @@ class _ListProductSearch extends StatelessWidget {
                       )
                     ),
                   ),
-                  SizedBox(width: 5.0),
+                  const SizedBox(width: 5.0),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         TextFrave(text: listProduct[i].nameProduct),
-                        SizedBox(height: 5.0),
+                        const SizedBox(height: 5.0),
                         TextFrave(text: '\$ ${listProduct[i].price }', color: Colors.grey),
                       ],
                     ),
@@ -190,13 +190,13 @@ class _HistorySearch extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        TextFrave(text: 'RECENT SEARCH', fontSize: 16, color: Colors.grey),
-        SizedBox(height: 10.0),
+        const TextFrave(text: 'RECENT SEARCH', fontSize: 16, color: Colors.grey),
+        const SizedBox(height: 10.0),
         ListTile(
-          contentPadding: EdgeInsets.all(0),
+          contentPadding: const EdgeInsets.all(0),
           minLeadingWidth: 20,
-          leading: Icon(Icons.history),
-          title: TextFrave(text: 'Burger', color: Colors.grey),
+          leading: const Icon(Icons.history),
+          title: const TextFrave(text: 'Burger', color: Colors.grey),
         )
       ],
     );

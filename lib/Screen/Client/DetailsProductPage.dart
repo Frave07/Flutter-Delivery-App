@@ -39,8 +39,8 @@ class _DetailsProductPageState extends State<DetailsProductPage> {
   }
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context){
+
     final size = MediaQuery.of(context).size;
     final cartBloc = BlocProvider.of<CartBloc>(context);
 
@@ -84,7 +84,7 @@ class _DetailsProductPageState extends State<DetailsProductPage> {
                   ],
                 ),
                 Container(
-                  padding: EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(20.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -100,10 +100,10 @@ class _DetailsProductPageState extends State<DetailsProductPage> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(10.0)
                           ),
-                          child: Icon(Icons.arrow_back_ios_new_rounded, size: 20),
+                          child: const Icon(Icons.arrow_back_ios_new_rounded, size: 20),
                         ),
                       ),
-                      TextFrave(text: 'Details', fontSize: 20, fontWeight: FontWeight.w500 ),
+                      const TextFrave(text: 'Details', fontSize: 20, fontWeight: FontWeight.w500 ),
                       Container(
                         height: 40,
                         width: 40,
@@ -111,28 +111,28 @@ class _DetailsProductPageState extends State<DetailsProductPage> {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10.0)
                         ),
-                        child: Icon(Icons.favorite_border_outlined, size: 20),
+                        child: const Icon(Icons.favorite_border_outlined, size: 20),
                       ),
                     ],
                   ),
                 )
               ],
             )
-            : ShimmerFrave(),
-            SizedBox(height: 20.0),
+            : const ShimmerFrave(),
+            const SizedBox(height: 20.0),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
                     decoration: BoxDecoration(
                       color: ColorsFrave.primaryColor,
                       borderRadius: BorderRadius.circular(5.0)
                     ),
                     child: Row(
-                      children: [
+                      children: const [
                         Icon(Icons.star_rounded, color: Colors.white, size: 18),
                         SizedBox(width: 3.0),
                         TextFrave(text: '4.9', color: Colors.white, fontSize: 17)
@@ -140,38 +140,34 @@ class _DetailsProductPageState extends State<DetailsProductPage> {
                     ),
                   ),
                   Row(
-                    children: [
+                    children: const [
                       Icon(Icons.timer, size: 18),
                       SizedBox(width: 5.0),
                       TextFrave(text: '30 Min'),
                     ],
                   ),
-                  TextFrave(text: '\$ Free Shipping')
+                  const TextFrave(text: '\$ Free Shipping')
                 ],
               ),
             ),
-            SizedBox(height: 30.0),
+            const SizedBox(height: 30.0),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: Container(
-                child: TextFrave(text: widget.product.nameProduct, fontSize: 30, fontWeight: FontWeight.w500 ),
-              ),
+              child: TextFrave(text: widget.product.nameProduct, fontSize: 30, fontWeight: FontWeight.w500 ),
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: Container(
-                child: TextFrave(text: widget.product.description, fontSize: 18, color: Colors.grey, maxLine: 5),
-              ),
+              child: TextFrave(text: widget.product.description, fontSize: 18, color: Colors.grey, maxLine: 5),
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             Expanded(
               child: Container(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Container(
-                      padding: EdgeInsets.symmetric(horizontal: 10.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       height: 90,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -194,13 +190,13 @@ class _DetailsProductPageState extends State<DetailsProductPage> {
                                     icon: Icon(Icons.remove),
                                     onPressed: () { if( state.quantity > 1 )  cartBloc.add(OnDecreaseProductQuantityEvent()); }
                                   ),
-                                  SizedBox(width: 10.0),
+                                  const SizedBox(width: 10.0),
                                   TextFrave(text: state.quantity.toString(), fontSize: 22, fontWeight: FontWeight.w500 ),
-                                  SizedBox(width: 10.0),
+                                  const SizedBox(width: 10.0),
                                   IconButton(
                                     splashColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
-                                    icon: Icon(Icons.add),
+                                    icon: const Icon(Icons.add),
                                     onPressed: () => cartBloc.add(OnIncreaseProductQuantityEvent())
                                   ),
                             
@@ -220,7 +216,7 @@ class _DetailsProductPageState extends State<DetailsProductPage> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   TextButton(
-                                    child: TextFrave(text: 'Add to cart', color: Colors.white, fontSize: 18 ),
+                                    child: const TextFrave(text: 'Add to cart', color: Colors.white, fontSize: 18 ),
                                     onPressed: (){
                                       final newProduct = ProductCart(
                                         uidProduct: widget.product.id.toString(), 
@@ -233,7 +229,7 @@ class _DetailsProductPageState extends State<DetailsProductPage> {
                                       modalSuccess(context, 'Product Added', () => Navigator.pop(context));
                                     },
                                   ),
-                                  SizedBox(width: 5.0),
+                                  const SizedBox(width: 5.0),
                                   BlocBuilder<CartBloc, CartState>(
                                     builder: (context, state) 
                                       => TextFrave(text: '\$ ${widget.product.price * state.quantity}', color: Colors.white, fontWeight: FontWeight.w500, fontSize: 20 )
@@ -250,7 +246,7 @@ class _DetailsProductPageState extends State<DetailsProductPage> {
                               ),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
+                                children: const [
                                   Icon(Icons.sentiment_dissatisfied_rounded, color: Colors.white, size: 30),
                                   SizedBox(width: 5.0),
                                   TextFrave(text: 'SOLD OUT', color: Colors.white, fontWeight: FontWeight.w500)

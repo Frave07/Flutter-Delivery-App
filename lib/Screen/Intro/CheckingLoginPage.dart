@@ -87,7 +87,7 @@ class _CheckingLoginPageState extends State<CheckingLoginPage> with TickerProvid
                 builder: (context, child) 
                   => Transform.scale(
                     scale: _scaleAnimation.value,
-                    child: Container(
+                    child: SizedBox(
                       height: 200,
                       width: 200,
                       child: Image.asset('Assets/Logo/logo-white.png'),

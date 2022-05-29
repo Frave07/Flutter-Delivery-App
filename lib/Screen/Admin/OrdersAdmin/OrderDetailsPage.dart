@@ -55,7 +55,7 @@ class OrderDetailsPage extends StatelessWidget {
             onTap: () => Navigator.pop(context),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Icon(Icons.arrow_back_ios_new_rounded, size: 17, color: ColorsFrave.primaryColor ),
                 TextFrave(text: 'Back', color: ColorsFrave.primaryColor, fontSize: 17)
               ],
@@ -71,7 +71,7 @@ class OrderDetailsPage extends StatelessWidget {
                 builder: (context, snapshot) 
                   => ( !snapshot.hasData )
                       ? Column(
-                        children: [
+                        children: const [
                           ShimmerFrave(),
                           SizedBox(height: 10.0),
                           ShimmerFrave(),
@@ -85,7 +85,7 @@ class OrderDetailsPage extends StatelessWidget {
             ),
             Expanded(
               child: Container(
-                padding: EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(10.0),
                 width: MediaQuery.of(context).size.width,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -93,36 +93,36 @@ class OrderDetailsPage extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        TextFrave(text: 'Total', color: ColorsFrave.secundaryColor, fontSize: 22, fontWeight: FontWeight.w500),
+                        const TextFrave(text: 'Total', color: ColorsFrave.secundaryColor, fontSize: 22, fontWeight: FontWeight.w500),
                         TextFrave(text: '\$ ${order.amount}0', fontSize: 22, fontWeight: FontWeight.w500),
                       ],
                     ),
-                    Divider(),
+                    const Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        TextFrave(text: 'Cliente:', color: ColorsFrave.secundaryColor, fontSize: 16),
+                        const TextFrave(text: 'Cliente:', color: ColorsFrave.secundaryColor, fontSize: 16),
                         TextFrave(text: '${order.cliente}'),
                       ],
                     ),
-                    SizedBox(height: 10.0),
+                    const SizedBox(height: 10.0),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        TextFrave(text: 'Date:', color: ColorsFrave.secundaryColor, fontSize: 16),
+                        const TextFrave(text: 'Date:', color: ColorsFrave.secundaryColor, fontSize: 16),
                         TextFrave(text: DateFrave.getDateOrder(order.currentDate.toString()), fontSize: 16),
                       ],
                     ),
-                    SizedBox(height: 10.0),
-                    TextFrave(text: 'Address shipping:', color: ColorsFrave.secundaryColor, fontSize: 16),
-                    SizedBox(height: 5.0),
+                    const SizedBox(height: 10.0),
+                    const TextFrave(text: 'Address shipping:', color: ColorsFrave.secundaryColor, fontSize: 16),
+                    const SizedBox(height: 5.0),
                     TextFrave(text: order.reference!, maxLine: 2, fontSize: 16),
-                    SizedBox(height: 5.0),
+                    const SizedBox(height: 5.0),
                     (order.status == 'DISPATCHED')
                     ? Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        TextFrave(text: 'Delivery', fontSize: 17, color: ColorsFrave.secundaryColor),
+                        const TextFrave(text: 'Delivery', fontSize: 17, color: ColorsFrave.secundaryColor),
                         Row(
                           children: [
                             Container(
@@ -134,19 +134,19 @@ class OrderDetailsPage extends StatelessWidget {
                                 )
                               ),
                             ),
-                            SizedBox(width: 10.0),
+                            const SizedBox(width: 10.0),
                             TextFrave(text: order.delivery!, fontSize: 17)
                           ],
                         )
                       ],
-                    ) : Container()
+                    ) : const SizedBox()
                   ],
                 ),
               )
             ),
             (order.status == 'PAID OUT')
             ? Container(
-              padding: EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               width: MediaQuery.of(context).size.width,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -158,7 +158,7 @@ class OrderDetailsPage extends StatelessWidget {
                   ) 
                 ],
               ),
-            ) : Container()
+            ) : const SizedBox()
           ],
         ),
       ),
@@ -175,7 +175,7 @@ class _ListProductsDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      padding: EdgeInsets.symmetric(horizontal: 10.0),
+      padding: const EdgeInsets.symmetric(horizontal: 10.0),
       itemCount: listProductDetails.length,
       separatorBuilder: (_, index) => Divider(),
       itemBuilder: (_, i) 
@@ -192,12 +192,12 @@ class _ListProductsDetails extends StatelessWidget {
                   )
                 ),
               ),
-              SizedBox(width: 15.0),
+              const SizedBox(width: 15.0),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextFrave(text: listProductDetails[i].nameProduct!, fontWeight: FontWeight.w500 ),
-                  SizedBox(height: 5.0),
+                  const SizedBox(height: 5.0),
                   TextFrave(text: 'Quantity: ${listProductDetails[i].quantity}', color: Colors.grey, fontSize: 17),
                 ],
               ),

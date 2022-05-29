@@ -13,12 +13,11 @@ import 'package:restaurant/Widgets/Widgets.dart';
 import 'package:restaurant/Helpers/Helpers.dart';
 
 
-class ProfileClientPage extends StatelessWidget
-{
+class ProfileClientPage extends StatelessWidget {
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context){
+
     final authBloc = BlocProvider.of<AuthBloc>(context);
 
     return BlocListener<AuthBloc, AuthState>(
@@ -44,25 +43,25 @@ class ProfileClientPage extends StatelessWidget
         backgroundColor: Colors.white,
         body: SafeArea(
           child: ListView(
-            physics: BouncingScrollPhysics(),
-            padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+            physics: const BouncingScrollPhysics(),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
             children: [
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               Align(
                 alignment: Alignment.center,
                 child: ImagePickerFrave()
               ),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               Center(
                 child: TextFrave(text: authBloc.state.user!.firstName! + ' ' + authBloc.state.user!.lastName!, fontSize: 25, fontWeight: FontWeight.w500 )
               ),
-              SizedBox(height: 5.0),
+              const SizedBox(height: 5.0),
               Center(
                 child: TextFrave(text: authBloc.state.user!.email!, fontSize: 20, color: Colors.grey )
               ),
-              SizedBox(height: 15.0),
-              TextFrave(text: 'Account', color: Colors.grey ),
-              SizedBox(height: 10.0),
+              const SizedBox(height: 15.0),
+              const TextFrave(text: 'Account', color: Colors.grey ),
+              const SizedBox(height: 10.0),
               ItemAccount(
                 text: 'Profile setting',
                 icon: Icons.person,
@@ -92,9 +91,9 @@ class ProfileClientPage extends StatelessWidget
                 icon: Icons.dark_mode_rounded,
                 colorIcon: 0xff051E2F,
               ),
-              SizedBox(height: 15.0),
-              TextFrave(text: 'Personal', color: Colors.grey ),
-              SizedBox(height: 10.0),
+              const SizedBox(height: 15.0),
+              const TextFrave(text: 'Personal', color: Colors.grey ),
+              const SizedBox(height: 10.0),
               ItemAccount(
                 text: 'Privacy & Policy',
                 icon: Icons.policy_rounded,
@@ -115,7 +114,7 @@ class ProfileClientPage extends StatelessWidget
                 icon: Icons.help_outline,
                 colorIcon: 0xff4772e6,
               ),
-              Divider(),
+              const Divider(),
               ItemAccount(
                 text: 'Sign Out',
                 icon: Icons.power_settings_new_sharp,

@@ -46,8 +46,8 @@ class _LoginPageState extends State<LoginPage> {
 
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context){
+
     final authBloc = BlocProvider.of<AuthBloc>(context);
     final userBloc = BlocProvider.of<UserBloc>(context);
 
@@ -86,7 +86,7 @@ class _LoginPageState extends State<LoginPage> {
             key: _keyForm,
             child: ListView(
               physics: BouncingScrollPhysics(),
-              padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+              padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
               children: [
                 Align(
                   alignment: Alignment.centerLeft,
@@ -103,11 +103,11 @@ class _LoginPageState extends State<LoginPage> {
                             color: Colors.grey[50],
                             shape: BoxShape.circle
                           ),
-                          child: Icon(Icons.arrow_back_ios_new_outlined, color: Colors.black, size: 20),
+                          child: const Icon(Icons.arrow_back_ios_new_outlined, color: Colors.black, size: 20),
                         ),
                       ),
                       Row(
-                        children: [
+                        children: const [
                           TextFrave(text: 'Frave ', color: ColorsFrave.primaryColor, fontWeight: FontWeight.w500 ),
                           TextFrave(text: 'Food', color: Colors.black87, fontWeight: FontWeight.w500 ),
                         ],
@@ -115,37 +115,37 @@ class _LoginPageState extends State<LoginPage> {
                     ],
                   ),
                 ),
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
                 Image.asset('Assets/Logo/logo-black.png', height: 150 ),
-                SizedBox(height: 30.0),
+                const SizedBox(height: 30.0),
                 Container(
                   alignment: Alignment.center,
-                  child: TextFrave(text: 'Welcome back!', fontSize: 35, fontWeight: FontWeight.bold, color: Color(0xff14222E) ),
+                  child: const TextFrave(text: 'Welcome back!', fontSize: 35, fontWeight: FontWeight.bold, color: Color(0xff14222E) ),
                 ),
-                SizedBox(height: 5.0),
+                const SizedBox(height: 5.0),
                 Align(
                   alignment: Alignment.center,
-                  child: TextFrave(text: 'Use your credentials below and login to your account.', textAlign: TextAlign.center, color: Colors.grey, maxLine: 2, fontSize: 16),
+                  child: const TextFrave(text: 'Use your credentials below and login to your account.', textAlign: TextAlign.center, color: Colors.grey, maxLine: 2, fontSize: 16),
                 ),
-                SizedBox(height: 50.0),
-                TextFrave(text: 'Email Address'),
-                SizedBox(height: 5.0),
+                const SizedBox(height: 50.0),
+                const TextFrave(text: 'Email Address'),
+                const SizedBox(height: 5.0),
                 FormFieldFrave(
                   controller: _emailController,
                   hintText: 'email@frave.com',
                   keyboardType: TextInputType.emailAddress,
                   validator: validatedEmail,
                 ),
-                SizedBox(height: 20.0),
-                TextFrave(text: 'Password'),
-                SizedBox(height: 5.0),
+                const SizedBox(height: 20.0),
+                const TextFrave(text: 'Password'),
+                const SizedBox(height: 5.0),
                 FormFieldFrave(
                   controller: _passwordController,
                   hintText: '********',
                   isPassword: true,
                   validator: passwordValidator,
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 Align(
                   alignment: Alignment.centerRight,
                   child: InkWell(
@@ -153,7 +153,7 @@ class _LoginPageState extends State<LoginPage> {
                     child: TextFrave(text: 'Forgot Password?', fontSize: 17, color: ColorsFrave.primaryColor )
                   )
                 ),
-                SizedBox(height: 40.0),
+                const SizedBox(height: 40.0),
                 BtnFrave(
                   text: 'Login',
                   fontSize: 21,

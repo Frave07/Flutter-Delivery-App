@@ -24,10 +24,10 @@ void modalPaymentWithNewCard({ required BuildContext ctx, required String amount
                     InkWell(child: Icon(Icons.close), onTap: () => Navigator.pop(context))
                   ],
                 ),
-                Divider(),
-                SizedBox(height: 10.0),
-                TextFrave(text: 'Payment Card'),
-                SizedBox(height: 10.0),
+                const Divider(),
+                const SizedBox(height: 10.0),
+                const TextFrave(text: 'Payment Card'),
+                const SizedBox(height: 10.0),
                 Container(
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey),
@@ -42,12 +42,12 @@ void modalPaymentWithNewCard({ required BuildContext ctx, required String amount
                     ),
                   ),
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 Row(
                   children: [
                     Flexible(
                       child: Container(
-                        margin: EdgeInsets.only(right: 3.0),
+                        margin: const EdgeInsets.only(right: 3.0),
                         decoration: BoxDecoration(
                           border: Border.all(color: Colors.grey),
                           borderRadius: BorderRadius.circular(8.0)
@@ -56,7 +56,7 @@ void modalPaymentWithNewCard({ required BuildContext ctx, required String amount
                           keyboardType: TextInputType.number,
                           decoration: InputDecoration(
                             border: InputBorder.none,
-                            contentPadding: EdgeInsets.only(left: 10.0),
+                            contentPadding: const EdgeInsets.only(left: 10.0),
                             hintText: '07/26'
                           ),
                         ),
@@ -64,7 +64,7 @@ void modalPaymentWithNewCard({ required BuildContext ctx, required String amount
                     ),
                     Flexible(
                       child: Container(
-                        margin: EdgeInsets.only(left: 3.0),
+                        margin: const EdgeInsets.only(left: 3.0),
                         decoration: BoxDecoration(
                           border: Border.all(color: Colors.grey),
                           borderRadius: BorderRadius.circular(8.0)
@@ -73,7 +73,7 @@ void modalPaymentWithNewCard({ required BuildContext ctx, required String amount
                           keyboardType: TextInputType.number,
                           decoration: InputDecoration(
                             border: InputBorder.none,
-                            contentPadding: EdgeInsets.only(left: 10.0),
+                            contentPadding: const EdgeInsets.only(left: 10.0),
                             hintText: 'CVV'
                           ),
                         ),
@@ -81,7 +81,7 @@ void modalPaymentWithNewCard({ required BuildContext ctx, required String amount
                     ),
                   ],
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 Container(
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey),
@@ -91,12 +91,12 @@ void modalPaymentWithNewCard({ required BuildContext ctx, required String amount
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      contentPadding: EdgeInsets.only(left: 10.0),
+                      contentPadding: const EdgeInsets.only(left: 10.0),
                       hintText: 'Email Address'
                     ),
                   ),
                 ),
-                SizedBox(height: 30.0),
+                const SizedBox(height: 30.0),
                 BtnFrave(
                   color: Color(0xff002C8B),
                   text: 'PAY NOW',

@@ -9,7 +9,7 @@ void modalPictureRegister({ required BuildContext ctx, VoidCallback? onPressedCh
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),
     builder: (context) 
       => Container(
-          margin: EdgeInsets.only(bottom: 20.0),
+          margin: const EdgeInsets.only(bottom: 20.0),
           height: 170,
           decoration: BoxDecoration(
             color: Colors.white,
@@ -23,19 +23,19 @@ void modalPictureRegister({ required BuildContext ctx, VoidCallback? onPressedCh
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                TextFrave(text: 'Change profile picture', fontWeight: FontWeight.w500),
-                SizedBox(height: 8.0),
+                const TextFrave(text: 'Change profile picture', fontWeight: FontWeight.w500),
+                const SizedBox(height: 8.0),
                 Container(
                   height: 50,
                   width: MediaQuery.of(context).size.width,
                   child: Card(
                     elevation: 0,
-                    margin: EdgeInsets.all(0),
+                    margin: const EdgeInsets.all(0),
                     child: InkWell(
                       onTap: onPressedChange,
                       child: Align(
                         alignment: Alignment.centerLeft,
-                        child: TextFrave(text: 'Select an image', fontSize: 17,),
+                        child: const TextFrave(text: 'Select an image', fontSize: 17,),
                       ),
                     ),
                   ),
@@ -45,12 +45,12 @@ void modalPictureRegister({ required BuildContext ctx, VoidCallback? onPressedCh
                   width: MediaQuery.of(context).size.width,
                   child: Card(
                     elevation: 0,
-                    margin: EdgeInsets.all(0),
+                    margin: const EdgeInsets.all(0),
                     child: InkWell(
                       onTap: onPressedTake,
                       child: Align(
                         alignment: Alignment.centerLeft,
-                        child: TextFrave(text: 'Take a picture', fontSize: 17,),
+                        child: const TextFrave(text: 'Take a picture', fontSize: 17,),
                       ),
                     ),
                   ),

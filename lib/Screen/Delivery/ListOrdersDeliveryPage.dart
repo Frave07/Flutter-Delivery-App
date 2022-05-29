@@ -11,13 +11,13 @@ import 'package:restaurant/Widgets/Widgets.dart';
 class ListOrdersDeliveryPage extends StatelessWidget {
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context){
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: TextFrave(text: 'List of orders'),
+        title: const TextFrave(text: 'List of orders'),
         centerTitle: true,
         elevation: 0,
         leadingWidth: 80,
@@ -25,7 +25,7 @@ class ListOrdersDeliveryPage extends StatelessWidget {
           onTap: () => Navigator.pop(context),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Icon(Icons.arrow_back_ios_new_rounded, size: 19, color: ColorsFrave.primaryColor ),
               TextFrave(text: 'Back', fontSize: 17, color: ColorsFrave.primaryColor )
             ],
@@ -37,7 +37,7 @@ class ListOrdersDeliveryPage extends StatelessWidget {
         builder: (context, snapshot) 
           => ( !snapshot.hasData )
             ? Column(
-                children: [
+                children: const [
                   ShimmerFrave(),
                   SizedBox(height: 10.0),
                   ShimmerFrave(),
@@ -73,8 +73,8 @@ class _ListOrdersForDelivery extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Center(child: SvgPicture.asset('Assets/no-data.svg', height: 300)),
-          SizedBox(height: 15.0),
-          TextFrave(text: 'Without Orders', color: ColorsFrave.primaryColor, fontWeight: FontWeight.w500, fontSize: 21)
+          const SizedBox(height: 15.0),
+          const TextFrave(text: 'Without Orders', color: ColorsFrave.primaryColor, fontWeight: FontWeight.w500, fontSize: 21)
         ],
       );
   }

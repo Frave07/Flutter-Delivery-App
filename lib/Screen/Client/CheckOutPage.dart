@@ -46,7 +46,7 @@ class CheckOutPage extends StatelessWidget {
         backgroundColor: Colors.grey[50],
         appBar: AppBar(
           backgroundColor: Colors.grey[50],
-          title: TextFrave(text: 'Checkout', fontWeight: FontWeight.w500),
+          title: const TextFrave(text: 'Checkout', fontWeight: FontWeight.w500),
           centerTitle: true,
           elevation: 0,
           leadingWidth: 80,
@@ -54,7 +54,7 @@ class CheckOutPage extends StatelessWidget {
             onTap: () => Navigator.pop(context),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Icon(Icons.arrow_back_ios_new_rounded, color: ColorsFrave.primaryColor, size: 19),
                 TextFrave( text: 'Back ', fontSize: 17, color: ColorsFrave.primaryColor)
               ],
@@ -68,11 +68,11 @@ class CheckOutPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 _CheckoutAddress(),
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
                 _CheckoutPaymentMethods(),
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
                 _DetailsTotal(),
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
                 Expanded(
                   child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -108,7 +108,7 @@ class CheckOutPage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Icon(state.iconPayment, color: Colors.white),
-                                SizedBox(width: 10.0),
+                                const SizedBox(width: 10.0),
                                 TextFrave(text: state.typePaymentMethod, color: Colors.white)                              
                               ],
                             ),
@@ -133,7 +133,7 @@ class _DetailsTotal extends StatelessWidget {
     final cardBloc = BlocProvider.of<CartBloc>(context);
 
     return Container(
-      padding: EdgeInsets.all(15.0),
+      padding: const EdgeInsets.all(15.0),
       height: 190,
       decoration: BoxDecoration(
           color: Colors.white, 
@@ -142,36 +142,36 @@ class _DetailsTotal extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          TextFrave(text: 'Order Summary', fontWeight: FontWeight.w500),
-          Divider(),
+          const TextFrave(text: 'Order Summary', fontWeight: FontWeight.w500),
+          const Divider(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              TextFrave(text: 'Subtotal', color: Colors.grey),
+              const TextFrave(text: 'Subtotal', color: Colors.grey),
               TextFrave(text: '\$ ${cardBloc.state.total}0', color: Colors.grey),
             ],
           ),
-          SizedBox(height: 10.0),
+          const SizedBox(height: 10.0),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              TextFrave(text: 'IGV', color: Colors.grey),
+              const TextFrave(text: 'IGV', color: Colors.grey),
               TextFrave(text: '\$ 2.5', color: Colors.grey),
             ],
           ),
-          SizedBox(height: 10.0),
+          const SizedBox(height: 10.0),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              TextFrave(text: 'Shipping', color: Colors.grey),
+              const TextFrave(text: 'Shipping', color: Colors.grey),
               TextFrave(text: '\$ 0.00', color: Colors.grey),
             ],
           ),
-          Divider(),
+          const Divider(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              TextFrave(text: 'Total', fontWeight: FontWeight.w500),
+              const TextFrave(text: 'Total', fontWeight: FontWeight.w500),
               TextFrave(text: '\$ ${cardBloc.state.total}0', fontWeight: FontWeight.w500),
             ],
           ),
@@ -188,7 +188,7 @@ class _CheckoutPaymentMethods extends StatelessWidget {
     final paymentBloc = BlocProvider.of<PaymentsBloc>(context);
 
     return Container(
-      padding: EdgeInsets.all(15.0),
+      padding: const EdgeInsets.all(15.0),
       height: 155,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
@@ -201,7 +201,7 @@ class _CheckoutPaymentMethods extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              TextFrave(text: 'Payment Methods', fontWeight: FontWeight.w500),
+              const TextFrave(text: 'Payment Methods', fontWeight: FontWeight.w500),
               BlocBuilder<PaymentsBloc, PaymentsState>(
                   builder: (_, state) => TextFrave(
                       text: state.typePaymentMethod,
@@ -212,12 +212,12 @@ class _CheckoutPaymentMethods extends StatelessWidget {
               ),
             ],
           ),
-          Divider(),
-          SizedBox(height: 5.0),
+          const Divider(),
+          const SizedBox(height: 5.0),
           Container(
             height: 80,
             child: ListView.builder(
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
               itemCount: TypePaymentMethod.listTypePayment.length,
               itemBuilder: (_, i) => InkWell(
@@ -231,7 +231,7 @@ class _CheckoutPaymentMethods extends StatelessWidget {
                   builder: (_, state) => Container(
                     height: 80,
                     width: 80,
-                    margin: EdgeInsets.only(right: 10.0),
+                    margin: const EdgeInsets.only(right: 10.0),
                     decoration: BoxDecoration(
                         color: (TypePaymentMethod.listTypePayment[i].typePayment == state.typePaymentMethod)
                             ? Color(0xffF7FAFC)
@@ -260,7 +260,7 @@ class _CheckoutAddress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(15.0),
+      padding: const EdgeInsets.all(15.0),
       height: 95,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
@@ -273,18 +273,18 @@ class _CheckoutAddress extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              TextFrave(text: 'Shipping Address', fontWeight: FontWeight.w500),
+              const TextFrave(text: 'Shipping Address', fontWeight: FontWeight.w500),
               InkWell(
                   onTap: () => Navigator.push(
                       context, routeFrave(page: SelectAddressPage())),
-                  child: TextFrave(
+                  child: const TextFrave(
                       text: 'Change',
                       color: ColorsFrave.primaryColor,
                       fontSize: 17))
             ],
           ),
-          Divider(),
-          SizedBox(height: 5.0),
+          const Divider(),
+          const SizedBox(height: 5.0),
           BlocBuilder<UserBloc, UserState>(
               builder: (_, state) => TextFrave(
                   text: (state.addressName != '')

@@ -34,57 +34,57 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
 
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context){
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: TextFrave(text: 'Reset Password', fontSize: 21, fontWeight: FontWeight.w500 ),
+        title: const TextFrave(text: 'Reset Password', fontSize: 21, fontWeight: FontWeight.w500 ),
         centerTitle: true,
         leadingWidth: 80,
         leading: InkWell(
           onTap: () => Navigator.pushReplacement(context, routeFrave(page: LoginPage())),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Icon(Icons.arrow_back_ios_new_rounded, size: 18, color: ColorsFrave.primaryColor ),
-              TextFrave(text: 'Back', color: ColorsFrave.primaryColor, fontSize: 18)
+              TextFrave(text: 'Back', color: ColorsFrave.primaryColor, fontSize: 16)
             ],
           ),
         ),
-        actions: [
-          Icon(Icons.help_outline_outlined)
+        actions: const [
+          Icon(Icons.help_outline_outlined, color: Colors.black),
+          SizedBox(width: 15.0),
         ],
       ),
       body: SafeArea(
         child: Form(
           key: _formKey,
           child: ListView(
-            padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
             children: [
-              TextFrave(
+              const TextFrave(
                 text: 'Enter the email associated with your account and well send an email with instruccions to reset your password.', 
                 maxLine: 4, 
-                color: Color(0xff5B6589),
-                textAlign: TextAlign.justify,
+                color: Colors.grey,
+                textAlign: TextAlign.center,
               ),
-              SizedBox(height: 30.0),
-              TextFrave(text: 'Email Address'),
-              SizedBox(height: 5.0),
+              const SizedBox(height: 30.0),
+              const TextFrave(text: 'Email Address'),
+              const SizedBox(height: 5.0),
               FormFieldFrave(
                 controller: _emailController,
                 hintText: 'example@frave.com',
                 validator: validatedEmail,
               ),
-              SizedBox(height: 30.0),
+              const SizedBox(height: 30.0),
               BtnFrave(
                 text: 'Send Instructions',
                 fontSize: 20,
                 fontWeight: FontWeight.w500,
                 onPressed: (){
-                    // if( _formKey.currentState!.validate() ){}
                     Navigator.push(context, routeFrave(page: CheckEmailPage()));
                 },
               )

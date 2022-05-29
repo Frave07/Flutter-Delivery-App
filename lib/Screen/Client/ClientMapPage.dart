@@ -98,7 +98,7 @@ class _InfoCardClient extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10.0),
+      padding: const EdgeInsets.all(10.0),
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -121,9 +121,9 @@ class _InfoCardClient extends StatelessWidget {
                   )
                 ), 
               ),
-              SizedBox(width: 10.0),
+              const SizedBox(width: 10.0),
               TextFrave(text: orderClient.delivery!),
-              Spacer(),
+              const Spacer(),
               InkWell(
                 onTap: () async => await urlLauncherFrave.makePhoneCall('tel:${orderClient.deliveryPhone}'),
                 child: Container(
@@ -133,7 +133,7 @@ class _InfoCardClient extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10.0),
                     color: Colors.grey[200]
                   ),
-                  child: Icon(Icons.phone, color: ColorsFrave.primaryColor),
+                  child: const Icon(Icons.phone, color: ColorsFrave.primaryColor),
                 ),
               )
             ],

@@ -59,8 +59,8 @@ class _OrdersDetailsDeliveryPageState extends State<OrdersDetailsDeliveryPage> {
   }
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context){
+
     final orderBloc = BlocProvider.of<OrdersBloc>(context);
 
     return BlocListener<OrdersBloc, OrdersState>(
@@ -95,7 +95,7 @@ class _OrdersDetailsDeliveryPageState extends State<OrdersDetailsDeliveryPage> {
               onTap: () => Navigator.pop(context),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: const [
                   Icon(Icons.arrow_back_ios_new_rounded, size: 17, color: ColorsFrave.primaryColor ),
                   TextFrave(text: 'Back', color: ColorsFrave.primaryColor, fontSize: 17)
                 ],
@@ -111,7 +111,7 @@ class _OrdersDetailsDeliveryPageState extends State<OrdersDetailsDeliveryPage> {
                   builder: (context, snapshot) 
                     => ( !snapshot.hasData )
                         ? Column(
-                          children: [
+                          children: const [
                             ShimmerFrave(),
                             SizedBox(height: 10.0),
                             ShimmerFrave(),
@@ -124,7 +124,7 @@ class _OrdersDetailsDeliveryPageState extends State<OrdersDetailsDeliveryPage> {
                 )
               ),
               Container(
-                padding: EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(10.0),
                 width: MediaQuery.of(context).size.width,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -144,11 +144,11 @@ class _OrdersDetailsDeliveryPageState extends State<OrdersDetailsDeliveryPage> {
                         TextFrave(text: widget.order.payType!, fontSize: 16),
                       ],
                     ),
-                    Divider(),
+                    const Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        TextFrave(text: 'CLIENT', color: ColorsFrave.primaryColor, fontSize: 17, fontWeight: FontWeight.w500),
+                        const TextFrave(text: 'CLIENT', color: ColorsFrave.primaryColor, fontSize: 17, fontWeight: FontWeight.w500),
                         Row(
                           children: [
                             Container(
@@ -161,35 +161,35 @@ class _OrdersDetailsDeliveryPageState extends State<OrdersDetailsDeliveryPage> {
                                 )
                               ),
                             ),
-                            SizedBox(width: 10.0),
+                            const SizedBox(width: 10.0),
                             TextFrave(text: '${widget.order.cliente}'),
                           ],
                         ),
                       ],
                     ),
-                    SizedBox(height: 10.0),
+                    const SizedBox(height: 10.0),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        TextFrave(text: 'DATE', color: ColorsFrave.primaryColor, fontSize: 17, fontWeight: FontWeight.w500),
+                        const TextFrave(text: 'DATE', color: ColorsFrave.primaryColor, fontSize: 17, fontWeight: FontWeight.w500),
                         TextFrave(text: DateFrave.getDateOrder(widget.order.currentDate.toString()), fontSize: 16),
                       ],
                     ),
-                    SizedBox(height: 10.0),
+                    const SizedBox(height: 10.0),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        TextFrave(text: 'ADDRESS', color: ColorsFrave.primaryColor, fontSize: 17, fontWeight: FontWeight.w500),
+                        const TextFrave(text: 'ADDRESS', color: ColorsFrave.primaryColor, fontSize: 17, fontWeight: FontWeight.w500),
                         TextFrave(text: widget.order.reference!, maxLine: 1, fontSize: 15),
                       ],
                     ),
-                    SizedBox(height: 15.0)
+                    const SizedBox(height: 15.0)
                   ],
                 ),
               ),
               ( widget.order.status != 'DELIVERED')
               ? Container(
-                  padding: EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(10.0),
                   width: MediaQuery.of(context).size.width,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -215,7 +215,7 @@ class _OrdersDetailsDeliveryPageState extends State<OrdersDetailsDeliveryPage> {
                     ],
                   ),
                 )
-              : Container()
+              : const SizedBox()
             ],
           ),
       ),
@@ -237,7 +237,7 @@ class _ListProductsDetails extends StatelessWidget {
       separatorBuilder: (_, index) => Divider(),
       itemBuilder: (_, i) 
         => Container(
-          padding: EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(10.0),
           child: Row(
             children: [
               Container(
@@ -249,12 +249,12 @@ class _ListProductsDetails extends StatelessWidget {
                   )
                 ),
               ),
-              SizedBox(width: 15.0),
+              const SizedBox(width: 15.0),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextFrave(text: listProductDetails[i].nameProduct!, fontWeight: FontWeight.w500 ),
-                  SizedBox(height: 5.0),
+                  const SizedBox(height: 5.0),
                   TextFrave(text: 'Quantity: ${listProductDetails[i].quantity}', color: Colors.grey, fontSize: 17),
                 ],
               ),

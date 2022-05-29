@@ -11,7 +11,7 @@ void modalSelectDelivery(BuildContext context, String idOrder){
     builder: (context) 
       => AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
-        content: Container(
+        content: SizedBox(
           height: 400,
           width: MediaQuery.of(context).size.width,
           child: Column(
@@ -21,28 +21,28 @@ void modalSelectDelivery(BuildContext context, String idOrder){
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
-                    children: [
+                    children: const [
                       TextFrave(text: 'Frave ', color: ColorsFrave.primaryColor, fontWeight: FontWeight.w500 ),
                       TextFrave(text: 'Food', fontWeight: FontWeight.w500),
                     ],
                   ),
                   InkWell(
                     onTap: () => Navigator.pop(context),
-                    child: Icon(Icons.close)
+                    child: const Icon(Icons.close)
                   )
                 ],
               ),
-              Divider(),
-              SizedBox(height: 10.0),
-              TextFrave(text: 'Select delivery man'),
-              SizedBox(height: 10.0),
+              const Divider(),
+              const SizedBox(height: 10.0),
+              const TextFrave(text: 'Select delivery man'),
+              const SizedBox(height: 10.0),
               Expanded(
                 child: FutureBuilder<List<Delivery>?>(
                   future: deliveryController.getAlldelivery(),
                   builder: (context, snapshot) 
                     => ( !snapshot.hasData )
                       ? Column(
-                          children: [
+                          children: const [
                             ShimmerFrave(),
                             SizedBox(height: 10.0),
                             ShimmerFrave(),

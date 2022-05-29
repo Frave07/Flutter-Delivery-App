@@ -48,8 +48,8 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
   }
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context){
+
     final generalBloc = BlocProvider.of<GeneralBloc>(context);
     final userBloc = BlocProvider.of<UserBloc>(context);
 
@@ -76,12 +76,12 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
         appBar: AppBar(
             backgroundColor: Colors.white,
             elevation: 0,
-            title: TextFrave(text: 'Change Password'),
+            title: const TextFrave(text: 'Change Password'),
             centerTitle: true,
             leadingWidth: 80,
             leading: TextButton(
               onPressed: () => Navigator.pop(context),
-              child: TextFrave(text: 'Cancel', fontSize: 17, color: ColorsFrave.primaryColor )
+              child: const TextFrave(text: 'Cancel', fontSize: 17, color: ColorsFrave.primaryColor )
             ),
             actions: [
               TextButton(
@@ -90,7 +90,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                     userBloc.add( OnChangePasswordEvent(_currentPasswordController.text, _newPasswordController.text) );
                   }
                 }, 
-                child: TextFrave(text: 'Save', fontSize: 16, color: ColorsFrave.primaryColor)
+                child: const TextFrave(text: 'Save', fontSize: 16, color: ColorsFrave.primaryColor)
               )
             ],
           ),
@@ -104,9 +104,9 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                   => Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: 20.0),
-                    TextFrave(text: 'Current Password'),
-                    SizedBox(height: 5.0),
+                    const SizedBox(height: 20.0),
+                    const TextFrave(text: 'Current Password'),
+                    const SizedBox(height: 5.0),
                     FormFieldFravePassword(
                         controller: _currentPasswordController,
                         isPassword: state.isShowPassword,
@@ -122,9 +122,9 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                         ),
                         validator: passwordValidator,
                     ),
-                    SizedBox(height: 20.0),
-                    TextFrave(text: 'New Password'),
-                    SizedBox(height: 5.0),
+                    const SizedBox(height: 20.0),
+                    const TextFrave(text: 'New Password'),
+                    const SizedBox(height: 5.0),
                     FormFieldFravePassword(
                         controller: _newPasswordController,
                         isPassword: state.isNewPassword,
@@ -140,9 +140,9 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                         ),
                         validator: passwordValidator,
                     ),
-                    SizedBox(height: 20.0),
-                    TextFrave(text: 'Repeat Password'),
-                    SizedBox(height: 5.0),
+                    const SizedBox(height: 20.0),
+                    const TextFrave(text: 'Repeat Password'),
+                    const SizedBox(height: 5.0),
                     FormFieldFravePassword(
                       controller: _repeatPasswordController,
                       isPassword: state.isRepeatpassword,
@@ -209,7 +209,7 @@ class FormFieldFravePassword extends StatelessWidget {
       decoration: InputDecoration(
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0)),
         enabledBorder: OutlineInputBorder(borderSide: BorderSide(width: .5, color: Colors.grey)),
-        contentPadding: EdgeInsets.only(left: 15.0),
+        contentPadding: const EdgeInsets.only(left: 15.0),
         hintText: hintText,
         hintStyle: GoogleFonts.getFont('Roboto', color: Colors.grey),
         suffixIcon: suffixIcon 

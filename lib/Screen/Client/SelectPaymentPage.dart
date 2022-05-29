@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 
 
-class SelectPaymentPage extends StatelessWidget
-{
+class SelectPaymentPage extends StatelessWidget {
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         

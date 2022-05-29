@@ -37,8 +37,8 @@ class _AddCategoryAdminPageState extends State<AddCategoryAdminPage> {
   }
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
+
     final productBloc = BlocProvider.of<ProductsBloc>(context);
 
     return BlocListener<ProductsBloc, ProductsState>(
@@ -61,14 +61,14 @@ class _AddCategoryAdminPageState extends State<AddCategoryAdminPage> {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: TextFrave(text: 'Add Category'),
+          title: const TextFrave(text: 'Add Category'),
           centerTitle: true,
           leadingWidth: 80,
           leading: InkWell(
             onTap: () => Navigator.pop(context),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Icon(Icons.arrow_back_ios_new_rounded, color: ColorsFrave.primaryColor , size: 17),
                 TextFrave(text: 'Back', fontSize: 17, color: ColorsFrave.primaryColor )
               ],
@@ -82,7 +82,7 @@ class _AddCategoryAdminPageState extends State<AddCategoryAdminPage> {
                   productBloc.add(OnAddNewCategoryEvent(_nameCategoryController.text, _categoryDescriptionController.text));
                 }
               }, 
-              child: TextFrave(text: 'Save', color: ColorsFrave.primaryColor )
+              child: const TextFrave(text: 'Save', color: ColorsFrave.primaryColor )
             )
           ],
         ),
@@ -93,17 +93,17 @@ class _AddCategoryAdminPageState extends State<AddCategoryAdminPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 20.0),
-                TextFrave(text: 'Category name'),
-                SizedBox(height: 5.0),
+                const SizedBox(height: 20.0),
+                const TextFrave(text: 'Category name'),
+                const SizedBox(height: 5.0),
                 FormFieldFrave(
                   controller: _nameCategoryController,
                   hintText: 'Drinks',
                   validator: RequiredValidator(errorText: 'Category name is required'),
                 ),
-                SizedBox(height: 25.0),
-                TextFrave(text: 'Category Description'),
-                SizedBox(height: 5.0),
+                const SizedBox(height: 25.0),
+                const TextFrave(text: 'Category Description'),
+                const SizedBox(height: 5.0),
                 FormFieldFrave(
                   controller: _categoryDescriptionController,
                   maxLine: 8,

@@ -32,7 +32,7 @@ class FormFieldFrave extends StatelessWidget {
       decoration: InputDecoration(
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0)),
         enabledBorder: OutlineInputBorder(borderSide: BorderSide(width: .5, color: Colors.grey)),
-        contentPadding: EdgeInsets.only(left: 15.0),
+        contentPadding: const EdgeInsets.only(left: 15.0),
         hintText: hintText,
         hintStyle: GoogleFonts.getFont('Roboto', color: Colors.grey),
       ),

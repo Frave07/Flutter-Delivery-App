@@ -15,15 +15,15 @@ void modalLoading(BuildContext context){
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
-                children: [
+                children: const [
                   TextFrave(text: 'Frave ', color: ColorsFrave.primaryColor, fontWeight: FontWeight.w500 ),
                   TextFrave(text: 'Food', fontWeight: FontWeight.w500),
                 ],
               ),
-              Divider(),
-              SizedBox(height: 10.0),
+              const Divider(),
+              const SizedBox(height: 10.0),
               Row(
-                children: [
+                children: const [
                   CircularProgressIndicator( color: ColorsFrave.primaryColor),
                   SizedBox(width: 15.0),
                   TextFrave(text: 'Loading...')

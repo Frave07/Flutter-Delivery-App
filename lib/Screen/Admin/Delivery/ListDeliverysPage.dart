@@ -47,14 +47,14 @@ class _ListDeliverysPageState extends State<ListDeliverysPage> {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: TextFrave(text: 'List Delivery men'),
+          title: const TextFrave(text: 'List Delivery men'),
           centerTitle: true,
           leadingWidth: 80,
           leading: InkWell(
             onTap: () => Navigator.pop(context),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Icon(Icons.arrow_back_ios_new_rounded, color: ColorsFrave.primaryColor, size: 17),
                 TextFrave(text: 'Back', fontSize: 17, color: ColorsFrave.primaryColor,)
               ],
@@ -64,7 +64,7 @@ class _ListDeliverysPageState extends State<ListDeliverysPage> {
           actions: [
             TextButton(
               onPressed: () => Navigator.push(context, routeFrave(page: AddNewDeliveryPage())), 
-              child: TextFrave(text: 'Add', color: ColorsFrave.primaryColor, fontSize: 17)
+              child: const TextFrave(text: 'Add', color: ColorsFrave.primaryColor, fontSize: 17)
             )
           ],
         ),
@@ -73,7 +73,7 @@ class _ListDeliverysPageState extends State<ListDeliverysPage> {
           builder: (context, snapshot) 
             => ( !snapshot.hasData )
               ? Column(
-                  children: [
+                  children: const [
                     ShimmerFrave(),
                     SizedBox(height: 10.0),
                     ShimmerFrave(),
@@ -101,7 +101,7 @@ class _ListDelivery extends StatelessWidget {
     
     return (listDelivery.length != 0)
     ? ListView.builder(
-        padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
         itemCount: listDelivery.length,
         itemBuilder: (context, i) 
           => Padding(
@@ -118,7 +118,7 @@ class _ListDelivery extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(10.0),
               child: Container(
-                padding: EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(10.0),
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: Colors.grey[100],
@@ -136,12 +136,12 @@ class _ListDelivery extends StatelessWidget {
                         )
                       ),
                     ),
-                    SizedBox(width: 15.0),
+                    const SizedBox(width: 15.0),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         TextFrave(text: listDelivery[i].nameDelivery!, fontWeight: FontWeight.w500 ),
-                        SizedBox(height: 5.0),
+                        const SizedBox(height: 5.0),
                         TextFrave(text: listDelivery[i].phone!, color: Colors.grey),
                       ],
                     )
@@ -156,8 +156,8 @@ class _ListDelivery extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SvgPicture.asset('Assets/no-data.svg', height: 290),
-          SizedBox(height: 20.0),
-          TextFrave(text: 'Without Delivery men', color: ColorsFrave.primaryColor, fontSize: 20)
+          const SizedBox(height: 20.0),
+          const TextFrave(text: 'Without Delivery men', color: ColorsFrave.primaryColor, fontSize: 20)
         ],
       ),
     );

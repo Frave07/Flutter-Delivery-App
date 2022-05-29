@@ -68,7 +68,7 @@ class _CreateMap extends StatelessWidget {
             },
            )
           : Center(
-              child: TextFrave(text: 'Locating...'),
+              child: const TextFrave(text: 'Locating...'),
             )
     );
   }

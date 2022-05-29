@@ -11,8 +11,7 @@ import 'package:restaurant/Widgets/Widgets.dart';
 class CheckEmailPage extends StatelessWidget {
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -22,25 +21,25 @@ class CheckEmailPage extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  SizedBox(height: 90.0),
+                  const SizedBox(height: 90.0),
                   Align(
                     alignment: Alignment.center,
                     child: Container(
-                      margin: EdgeInsets.only(top: 50.0),
+                      margin: const EdgeInsets.only(top: 50.0),
                       height: 110,
                       width: 110,
                       decoration: BoxDecoration(
                         color: ColorsFrave.primaryColor.withOpacity(.1),
                         borderRadius: BorderRadius.circular(20.0)
                       ),
-                      child: Icon(FontAwesomeIcons.envelopeOpenText, size: 60, color: ColorsFrave.primaryColor),
+                      child: const Icon(FontAwesomeIcons.envelopeOpenText, size: 60, color: ColorsFrave.primaryColor),
                     ),
                   ),
-                  SizedBox(height: 20.0),
-                  TextFrave(text: 'Check your mail', textAlign: TextAlign.center, fontSize: 32, fontWeight: FontWeight.w500 ),
-                  SizedBox(height: 20.0),
-                  TextFrave(text: 'We have send a password recover instructions to your email.', maxLine: 2, textAlign: TextAlign.center),
-                  SizedBox(height: 40.0),
+                  const SizedBox(height: 20.0),
+                  const TextFrave(text: 'Check your mail', textAlign: TextAlign.center, fontSize: 32, fontWeight: FontWeight.w500 ),
+                  const SizedBox(height: 20.0),
+                  const TextFrave(text: 'We have send a password recover instructions to your email.', maxLine: 2, textAlign: TextAlign.center),
+                  const SizedBox(height: 40.0),
                   Container(
                     margin: EdgeInsets.symmetric(horizontal: 70.0),
                     child: BtnFrave(
@@ -60,20 +59,20 @@ class CheckEmailPage extends StatelessWidget {
                       },
                     )
                   ),
-                  SizedBox(height: 40.0),
+                  const SizedBox(height: 40.0),
                   Container(
                     margin: EdgeInsets.symmetric(horizontal: 70.0),
                     child: InkWell(
                       onTap: () => Navigator.pushReplacement(context, routeFrave(page: LoginPage())),
-                      child: TextFrave(text: 'Skip, I\'ll confirm later')
+                      child: const TextFrave(text: 'Skip, I\'ll confirm later')
                     )
                   ),
-                  SizedBox(height: 20.0),
+                  const SizedBox(height: 20.0),
                 ],
               ),
               Container(
-                margin: EdgeInsets.only(bottom: 15.0),
-                child: TextFrave(text: 'Did not receive the email? Check your spam filter.', color: Colors.grey, maxLine: 2 )
+                margin: const EdgeInsets.only(bottom: 15.0),
+                child: const TextFrave(text: 'Did not receive the email? Check your spam filter.', color: Colors.grey, maxLine: 2 )
               ),
             ],
           ),

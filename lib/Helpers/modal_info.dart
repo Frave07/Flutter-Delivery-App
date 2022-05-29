@@ -9,18 +9,18 @@ void modalInfoFrave( BuildContext context, String text ){
     builder: (context) 
       => AlertDialog(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-          content: Container(
+          content: SizedBox(
             height: 250,
             child: Column(
               children: [
                 Row(
-                  children: [
+                  children: const [
                     TextFrave(text: 'Frave ', color: Colors.amber, fontWeight: FontWeight.w500 ),
                     TextFrave(text: 'Food', fontWeight: FontWeight.w500),
                   ],
                 ),
-                Divider(),
-                SizedBox(height: 10.0),
+                const Divider(),
+                const SizedBox(height: 10.0),
                 Container(
                   height: 90,
                   width: 90,
@@ -35,17 +35,17 @@ void modalInfoFrave( BuildContext context, String text ){
                     )
                   ),
                   child: Container(
-                    margin: EdgeInsets.all(10.0),
+                    margin: const EdgeInsets.all(10.0),
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.amber
                     ),
-                    child: Icon(Icons.priority_high_rounded, color: Colors.white, size: 38),
+                    child: const Icon(Icons.priority_high_rounded, color: Colors.white, size: 38),
                   ),                  
                 ),
-                SizedBox(height: 35.0),
+                const SizedBox(height: 35.0),
                 TextFrave(text: text, fontSize: 17, fontWeight: FontWeight.w400 ),
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
                 InkWell(
                   onTap: () => Navigator.pop(context),
                   child: Container(
@@ -56,7 +56,7 @@ void modalInfoFrave( BuildContext context, String text ){
                       color: Colors.amber,
                       borderRadius: BorderRadius.circular(5.0)
                     ),
-                    child: TextFrave(text: 'Done', color: Colors.white, fontSize: 16 ),
+                    child: const TextFrave(text: 'Done', color: Colors.white, fontSize: 16 ),
                   ),
                 )
               ],

@@ -11,12 +11,12 @@ import 'package:restaurant/Widgets/Widgets.dart';
 class ClientOrdersPage extends StatelessWidget {
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context){
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: TextFrave(text: 'My Orders', fontSize: 20 ),
+        title: const TextFrave(text: 'My Orders', fontSize: 20 ),
         backgroundColor: Colors.white,
         elevation: 0,
         centerTitle: true,
@@ -25,7 +25,7 @@ class ClientOrdersPage extends StatelessWidget {
           onTap: () => Navigator.pop(context),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Icon(Icons.arrow_back_ios_new_rounded, color: ColorsFrave.primaryColor, size: 17),
               TextFrave(text: 'Back', fontSize: 17, color: ColorsFrave.primaryColor )
             ],
@@ -37,7 +37,7 @@ class ClientOrdersPage extends StatelessWidget {
         builder: (context, snapshot) 
           => (!snapshot.hasData)
              ? Column(
-               children: [
+               children: const [
                  ShimmerFrave(),
                  SizedBox(height: 10.0),
                  ShimmerFrave(),
@@ -62,14 +62,14 @@ class _ListOrdersClient extends StatelessWidget {
   Widget build(BuildContext context) {
     return ( listOrders.length != 0 )
       ? ListView.builder(
-          padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
+          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
           itemCount: listOrders.length,
           itemBuilder: (context, i) 
             => GestureDetector(
               onTap: () => Navigator.push(context, routeFrave(page: ClientDetailsOrderPage(orderClient: listOrders[i]))),
               child: Container(
-                  margin: EdgeInsets.only(bottom: 20.0),
-                  padding: EdgeInsets.all(15.0),
+                  margin: const EdgeInsets.only(bottom: 20.0),
+                  padding: const EdgeInsets.all(15.0),
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                     color: Colors.blue[50],
@@ -89,19 +89,19 @@ class _ListOrdersClient extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Divider(),
+                      const Divider(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          TextFrave(text: 'AMOUNT', fontSize: 15, fontWeight: FontWeight.w500),
+                          const TextFrave(text: 'AMOUNT', fontSize: 15, fontWeight: FontWeight.w500),
                           TextFrave(text: '\$ ${listOrders[i].amount}0', fontSize: 16)
                         ],
                       ),
-                      SizedBox(height: 10.0),
+                      const SizedBox(height: 10.0),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          TextFrave(text: 'DATE', fontSize: 15, fontWeight: FontWeight.w500),
+                          const TextFrave(text: 'DATE', fontSize: 15, fontWeight: FontWeight.w500),
                           TextFrave(text: DateFrave.getDateOrder(listOrders[i].currentDate.toString()), fontSize: 15)
                         ],
                       ),

@@ -65,8 +65,8 @@ class _MapDeliveryPageState extends State<MapDeliveryPage> with WidgetsBindingOb
 
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context){
+
     return BlocListener<OrdersBloc, OrdersState>(
       listener: (context, state) {
         
@@ -98,7 +98,7 @@ class _MapDeliveryPageState extends State<MapDeliveryPage> with WidgetsBindingOb
                   alignment: Alignment.centerRight,
                   child: _BtnLocation()
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 Align(
                   alignment: Alignment.centerRight,
                   child: _BtnGoogleMap(order: widget.order)
@@ -144,18 +144,18 @@ class _InformationBottom extends StatelessWidget {
         children: [
           Row(
             children: [
-              Icon(Icons.location_on_outlined, size: 28, color: Colors.black87),
-              SizedBox(width: 15.0),
+              const Icon(Icons.location_on_outlined, size: 28, color: Colors.black87),
+              const SizedBox(width: 15.0),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TextFrave(text: 'Delivery Address', fontSize: 15, color: Colors.grey),
+                  const TextFrave(text: 'Delivery Address', fontSize: 15, color: Colors.grey),
                   TextFrave(text: order.reference!, fontSize: 16, maxLine: 2),
                 ],
               )
             ],
           ),
-          Divider(),
+          const Divider(),
           Row(
             children: [
               Container(
@@ -168,9 +168,9 @@ class _InformationBottom extends StatelessWidget {
                   )
                 ), 
               ),
-              SizedBox(width: 10.0),
+              const SizedBox(width: 10.0),
               TextFrave(text: order.cliente!),
-              Spacer(),
+              const Spacer(),
               InkWell(
                 onTap: () async => await urlLauncherFrave.makePhoneCall('tel:${order.clientPhone}'),
                 child: Container(
@@ -180,12 +180,12 @@ class _InformationBottom extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10.0),
                     color: Colors.grey[200]
                   ),
-                  child: Icon(Icons.phone, color: ColorsFrave.primaryColor),
+                  child: const Icon(Icons.phone, color: ColorsFrave.primaryColor),
                 ),
               )
             ],
           ),
-          SizedBox(height: 10.0),
+          const SizedBox(height: 10.0),
           BlocBuilder<MylocationmapBloc, MylocationmapState>(
             builder: (context, state) 
               => BtnFrave(
@@ -251,7 +251,7 @@ class _MapDelivery extends StatelessWidget {
               polylines: mapDelivery.state.polyline!.values.toSet(),
             )
           : Center(
-              child: TextFrave(text: 'Locating...'),
+              child: const TextFrave(text: 'Locating...'),
             );
       } 
     );
@@ -269,7 +269,7 @@ class _BtnLocation extends StatelessWidget {
 
     return SafeArea(
       child: Container(
-        margin: EdgeInsets.only(right: 10.0),
+        margin: const EdgeInsets.only(right: 10.0),
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(color: Colors.grey[300]!, blurRadius: 10, spreadRadius: -5)

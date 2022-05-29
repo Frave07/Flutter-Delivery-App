@@ -84,18 +84,18 @@ class _ListAddressesPageState extends State<ListAddressesPage> with WidgetsBindi
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: TextFrave(text: 'List Addresses', fontSize: 19),
+          title: const TextFrave(text: 'List Addresses', fontSize: 19),
           centerTitle: true,
           elevation: 0,
           leadingWidth: 80,
           leading: TextButton(
             onPressed: () => Navigator.pushReplacement(context, routeFrave(page: ProfileClientPage())), 
-            child: TextFrave(text: 'Cancel', color: ColorsFrave.primaryColor, fontSize: 17 )
+            child: const TextFrave(text: 'Cancel', color: ColorsFrave.primaryColor, fontSize: 17 )
           ),
           actions: [
             TextButton(
               onPressed: () async => accessLocation( await Permission.location.request() ), 
-              child: TextFrave(text: 'Add', color: ColorsFrave.primaryColor, fontSize: 17 )
+              child: const TextFrave(text: 'Add', color: ColorsFrave.primaryColor, fontSize: 17 )
             ),
           ],
         ),
@@ -103,7 +103,7 @@ class _ListAddressesPageState extends State<ListAddressesPage> with WidgetsBindi
           future: userController.getAddresses(),
           builder: (context, snapshot) 
             => (!snapshot.hasData)
-              ? ShimmerFrave()
+              ? const ShimmerFrave()
               : _ListAddresses(listAddress: snapshot.data!)
         ),
       ),
@@ -124,7 +124,7 @@ class _ListAddresses extends StatelessWidget {
 
     return ( listAddress.length  != 0 ) 
     ? ListView.builder(
-        padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
         itemCount: listAddress.length,
         itemBuilder: (_, i) 
           => Dismissible(
@@ -134,18 +134,18 @@ class _ListAddresses extends StatelessWidget {
                 onDismissed: (direction) => userBloc.add( OnDeleteStreetAddressEvent(listAddress[i].id!)),
                 secondaryBackground: Container(
                   alignment: Alignment.centerRight,
-                  padding: EdgeInsets.only(right: 20.0),
-                  margin: EdgeInsets.only(bottom: 20.0),
+                  padding: const EdgeInsets.only(right: 20.0),
+                  margin: const EdgeInsets.only(bottom: 20.0),
                   decoration: BoxDecoration(
                     color: Colors.red,
                     borderRadius: BorderRadius.only(topRight: Radius.circular(10.0), bottomRight: Radius.circular(10.0))
                   ),
-                  child: Icon(Icons.delete_sweep_rounded, color: Colors.white, size: 38),
+                  child: const Icon(Icons.delete_sweep_rounded, color: Colors.white, size: 38),
                 ),
                 child: Container(
                   height: 70,
                   width: MediaQuery.of(context).size.width,
-                  margin: EdgeInsets.only(bottom: 20.0),
+                  margin: const EdgeInsets.only(bottom: 20.0),
                   decoration: BoxDecoration(
                     color: Colors.grey[50],
                     borderRadius: BorderRadius.circular(10.0)
@@ -173,14 +173,14 @@ class _WithoutListAddress extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SvgPicture.asset('Assets/my-location.svg', height: 400 ),
-          TextFrave(text: 'Without Address', fontSize: 25, fontWeight: FontWeight.w500, color: ColorsFrave.secundaryColor ),
-          SizedBox(height: 80),
+          const TextFrave(text: 'Without Address', fontSize: 25, fontWeight: FontWeight.w500, color: ColorsFrave.secundaryColor ),
+          const SizedBox(height: 80),
         ],
       ),
     );

@@ -94,13 +94,13 @@ class _RegisterClientPageState extends State<RegisterClientPage> {
             } ,
             child: Container(
               alignment: Alignment.center,
-              child: TextFrave(text: 'Cancel', color: ColorsFrave.primaryColor, fontSize: 16 )
+              child: const TextFrave(text: 'Cancel', color: ColorsFrave.primaryColor, fontSize: 15)
             ),
           ),
           backgroundColor: Colors.white,
           elevation: 0,
           leadingWidth: 70,
-          title: TextFrave(text: 'Add new Account',),
+          title: const TextFrave(text: 'Create a Account',),
           centerTitle: true,
           actions: [
             InkWell(
@@ -119,9 +119,9 @@ class _RegisterClientPageState extends State<RegisterClientPage> {
                 }
               },
               child: Container(
-                margin: EdgeInsets.only(right: 10.0),
+                margin: const EdgeInsets.only(right: 10.0),
                 alignment: Alignment.center,
-                child: TextFrave(text: 'Save', color: ColorsFrave.primaryColor, fontSize: 16 ),
+                child: const TextFrave(text: 'Save', color: ColorsFrave.primaryColor, fontSize: 15 ),
               ),
             ),
           ],
@@ -129,51 +129,51 @@ class _RegisterClientPageState extends State<RegisterClientPage> {
         body: Form(
           key: _keyForm,
           child: ListView(
-            physics: BouncingScrollPhysics(),
-            padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+            physics: const BouncingScrollPhysics(),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
             children: [
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               Align(
                 alignment: Alignment.center,
                 child: _PictureRegistre()
               ),
-              SizedBox(height: 40.0),
-              TextFrave(text: 'Name'),
-              SizedBox(height: 5.0),
+              const SizedBox(height: 40.0),
+              const TextFrave(text: 'Name'),
+              const SizedBox(height: 5.0),
               FormFieldFrave(
                 controller: _nameController,
                 hintText: 'Enter your name',
                 validator: RequiredValidator(errorText: 'Name is required'),
               ),
-              SizedBox(height: 15.0),
-              TextFrave(text: 'Lastname'),
-              SizedBox(height: 5.0),
+              const SizedBox(height: 15.0),
+              const TextFrave(text: 'Lastname'),
+              const SizedBox(height: 5.0),
               FormFieldFrave(
                 controller: _lastnameController,
                 hintText: 'Enter your lastname',
                 validator: RequiredValidator(errorText: 'Lastname is required'),
               ),
-              SizedBox(height: 15.0),
-              TextFrave(text: 'Phone'),
-              SizedBox(height: 5.0),
+              const SizedBox(height: 15.0),
+              const TextFrave(text: 'Phone'),
+              const SizedBox(height: 5.0),
               FormFieldFrave(
                 controller: _phoneController,
                 hintText: '000-000-000',
                 keyboardType: TextInputType.number,
                 validator: validatedPhoneForm,
               ),
-              SizedBox(height: 15.0),
-              TextFrave(text: 'Email'),
-              SizedBox(height: 5.0),
+              const SizedBox(height: 15.0),
+              const TextFrave(text: 'Email'),
+              const SizedBox(height: 5.0),
               FormFieldFrave(
                 controller: _emailController,
                 hintText: 'email@frave.com',
                 keyboardType: TextInputType.emailAddress,
                 validator: validatedEmail
               ),
-              SizedBox(height: 15.0),
-              TextFrave(text: 'Password'),
-              SizedBox(height: 5.0),
+              const SizedBox(height: 15.0),
+              const TextFrave(text: 'Password'),
+              const SizedBox(height: 5.0),
               FormFieldFrave(
                 controller: _passwordController,
                 hintText: '********',
@@ -256,7 +256,7 @@ class _PictureRegistre extends StatelessWidget {
                 => state.pictureProfilePath == ''
                    ? Column(
                      mainAxisAlignment: MainAxisAlignment.center,
-                     children: [
+                     children: const [
                         Icon(Icons.wallpaper_rounded, size: 60, color: ColorsFrave.primaryColor ),
                         SizedBox(height: 10.0),
                         TextFrave(text: 'Picture', color: Colors.grey )

@@ -25,9 +25,8 @@ class BtnFrave extends StatelessWidget
   });
 
   @override
-  Widget build(BuildContext context)
-  {
-    return Container(
+  Widget build(BuildContext context){
+    return SizedBox(
       height: height,
       width: width,
       child: TextButton(

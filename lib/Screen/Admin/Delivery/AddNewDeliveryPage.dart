@@ -86,11 +86,11 @@ class _AddNewDeliveryPageState extends State<AddNewDeliveryPage> {
         backgroundColor: Colors.white,
         appBar: AppBar(
             backgroundColor: Colors.white,
-            title: TextFrave(text: 'Add New Delivery'),
+            title: const TextFrave(text: 'Add New Delivery'),
             centerTitle: true,
             leadingWidth: 80,
             leading: TextButton(
-              child: TextFrave(text: 'Cancel', color: ColorsFrave.primaryColor, fontSize: 17 ),
+              child: const TextFrave(text: 'Cancel', color: ColorsFrave.primaryColor, fontSize: 17 ),
               onPressed: () => Navigator.pop(context),
             ),
             elevation: 0,
@@ -109,64 +109,64 @@ class _AddNewDeliveryPageState extends State<AddNewDeliveryPage> {
                     
                   }
                 }, 
-                child: TextFrave(text: ' Save ', color: ColorsFrave.primaryColor )
+                child: const TextFrave(text: ' Save ', color: ColorsFrave.primaryColor )
               )
             ],
           ),
         body: Form(
           key: _keyForm,
           child: ListView(
-            physics: BouncingScrollPhysics(),
-            padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+            physics: const BouncingScrollPhysics(),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
             children: [
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               Align(
                 alignment: Alignment.center,
                 child: _PictureRegistre()
               ),
-              SizedBox(height: 20.0),
-              TextFrave(text: 'Name'),
-              SizedBox(height: 5.0),
+              const SizedBox(height: 20.0),
+              const TextFrave(text: 'Name'),
+              const SizedBox(height: 5.0),
               FormFieldFrave(
                 hintText: 'name',
                 controller: _nameController,
                 validator: RequiredValidator(errorText: 'Name is required'),
               ),
-              SizedBox(height: 20.0),
-              TextFrave(text: 'Lastname'),
-              SizedBox(height: 5.0),
+              const SizedBox(height: 20.0),
+              const TextFrave(text: 'Lastname'),
+              const SizedBox(height: 5.0),
               FormFieldFrave(
                 controller: _lastnameController,
                 hintText: 'lastname',
                 validator: RequiredValidator(errorText: 'Lastname is required'),
               ),
-              SizedBox(height: 20.0),
-              TextFrave(text: 'Phone'),
-              SizedBox(height: 5.0),
+              const SizedBox(height: 20.0),
+              const TextFrave(text: 'Phone'),
+              const SizedBox(height: 5.0),
               FormFieldFrave(
                 controller: _phoneController,
                 hintText: '---.---.---',
                 keyboardType: TextInputType.number,
                 validator: RequiredValidator(errorText: 'Lastname is required'),
               ),
-              SizedBox(height: 15.0),
-                TextFrave(text: 'Email'),
-                SizedBox(height: 5.0),
-                FormFieldFrave(
-                  controller: _emailController,
-                  hintText: 'email@frave.com',
-                  keyboardType: TextInputType.emailAddress,
-                  validator: validatedEmail
-                ),
-                SizedBox(height: 15.0),
-                TextFrave(text: 'Password'),
-                SizedBox(height: 5.0),
-                FormFieldFrave(
-                  controller: _passwordController,
-                  hintText: '********',
-                  isPassword: true,
-                  validator: passwordValidator,
-                ),
+              const SizedBox(height: 15.0),
+              const TextFrave(text: 'Email'),
+              const SizedBox(height: 5.0),
+              FormFieldFrave(
+                controller: _emailController,
+                hintText: 'email@frave.com',
+                keyboardType: TextInputType.emailAddress,
+                validator: validatedEmail
+              ),
+              const SizedBox(height: 15.0),
+              const TextFrave(text: 'Password'),
+              const SizedBox(height: 5.0),
+              FormFieldFrave(
+                controller: _passwordController,
+                hintText: '********',
+                isPassword: true,
+                validator: passwordValidator,
+              ),
             ],
           ),
         ),
@@ -217,7 +217,7 @@ class _PictureRegistre extends StatelessWidget {
                 => state.pictureProfilePath == ''
                    ? Column(
                      mainAxisAlignment: MainAxisAlignment.center,
-                     children: [
+                     children: const [
                         Icon(Icons.wallpaper_rounded, size: 60, color: ColorsFrave.primaryColor ),
                         SizedBox(height: 10.0),
                         TextFrave(text: 'Picture', color: Colors.black45 )

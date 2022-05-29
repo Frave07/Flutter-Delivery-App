@@ -17,8 +17,10 @@ import 'package:restaurant/Widgets/Widgets.dart';
 import 'package:restaurant/Helpers/Helpers.dart';
 
 class AdminHomePage extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
+
     final authBloc = BlocProvider.of<AuthBloc>(context);
 
     return BlocListener<UserBloc, UserState>(
@@ -43,11 +45,11 @@ class AdminHomePage extends StatelessWidget {
         backgroundColor: Colors.white,
         body: SafeArea(
           child: ListView(
-            physics: BouncingScrollPhysics(),
-            padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+            physics: const BouncingScrollPhysics(),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
             children: [
               Align(alignment: Alignment.center, child: ImagePickerFrave()),
-              SizedBox(height: 10.0),
+              const SizedBox(height: 10.0),
               Center(
                 child: BlocBuilder<UserBloc, UserState>(
                   builder: (_, state) 
@@ -60,16 +62,16 @@ class AdminHomePage extends StatelessWidget {
                       )
                 )
               ),
-              SizedBox(height: 5.0),
+              const SizedBox(height: 5.0),
               Center(
                   child: BlocBuilder<UserBloc, UserState>(
                     builder: (_, state) 
                       => TextFrave( text: (state.user != null ) ? state.user!.email! : '', fontSize: 20, color: ColorsFrave.secundaryColor)
                   )
               ),
-              SizedBox(height: 15.0),
-              TextFrave(text: 'Account', color: Colors.grey),
-              SizedBox(height: 10.0),
+              const SizedBox(height: 15.0),
+              const TextFrave(text: 'Account', color: Colors.grey),
+              const SizedBox(height: 10.0),
               ItemAccount(
                 text: 'Profile setting',
                 icon: Icons.person,
@@ -95,9 +97,9 @@ class AdminHomePage extends StatelessWidget {
                 icon: Icons.dark_mode_rounded,
                 colorIcon: 0xff051E2F,
               ),
-              SizedBox(height: 15.0),
-              TextFrave(text: 'Restaurant', color: Colors.grey),
-              SizedBox(height: 10.0),
+              const SizedBox(height: 15.0),
+              const TextFrave(text: 'Restaurant', color: Colors.grey),
+              const SizedBox(height: 10.0),
               ItemAccount(
                 text: 'Categories',
                 icon: Icons.category_rounded,
@@ -126,9 +128,9 @@ class AdminHomePage extends StatelessWidget {
                 onPressed: () => Navigator.push(
                     context, routeFrave(page: OrdersAdminPage())),
               ),
-              SizedBox(height: 15.0),
-              TextFrave(text: 'Personal', color: Colors.grey),
-              SizedBox(height: 10.0),
+              const SizedBox(height: 15.0),
+              const TextFrave(text: 'Personal', color: Colors.grey),
+              const SizedBox(height: 10.0),
               ItemAccount(
                 text: 'Privacy & Policy',
                 icon: Icons.policy_rounded,
@@ -149,7 +151,7 @@ class AdminHomePage extends StatelessWidget {
                 icon: Icons.help_outline,
                 colorIcon: 0xff4772e6,
               ),
-              Divider(),
+              const Divider(),
               ItemAccount(
                 text: 'Sign Out',
                 icon: Icons.power_settings_new_sharp,

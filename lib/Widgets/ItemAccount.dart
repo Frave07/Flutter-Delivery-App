@@ -24,7 +24,7 @@ class ItemAccount extends StatelessWidget {
     return Container(
       height: 50,
       width: size.width,
-      margin: EdgeInsets.only(bottom: 10.0),
+      margin: const EdgeInsets.only(bottom: 10.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(borderRadius)
       ),
@@ -52,11 +52,11 @@ class ItemAccount extends StatelessWidget {
                       ),
                       child: Icon(icon, color: Colors.white ),
                     ),
-                    SizedBox(width: 8.0),
+                    const SizedBox(width: 8.0),
                     TextFrave(text: text),
                   ],
                 ),
-                Icon(Icons.navigate_next_rounded)
+                const Icon(Icons.navigate_next_rounded)
               ],
             ),
           ),

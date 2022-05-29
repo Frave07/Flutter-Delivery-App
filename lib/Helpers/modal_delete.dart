@@ -8,7 +8,7 @@ void modalDelete(BuildContext context, String name, String image, VoidCallback o
     builder: (context) 
       => AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
-        content: Container(
+        content: SizedBox(
           height: 196,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -17,21 +17,21 @@ void modalDelete(BuildContext context, String name, String image, VoidCallback o
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
-                    children: [
+                    children: const [
                       TextFrave(text: 'Frave ', color: Colors.red, fontWeight: FontWeight.w500 ),
                       TextFrave(text: 'Food', fontWeight: FontWeight.w500),
                     ],
                   ),
                   InkWell(
                     onTap: () => Navigator.pop(context),
-                    child: Icon(Icons.close)
+                    child: const Icon(Icons.close)
                   )
                 ],
               ),
-              Divider(),
-              SizedBox(height: 10.0),
-              TextFrave(text: 'Are you sure?'),
-              SizedBox(height: 20.0),
+              const Divider(),
+              const SizedBox(height: 10.0),
+              const TextFrave(text: 'Are you sure?'),
+              const SizedBox(height: 20.0),
               Row(
                 children: [
                   Container(
@@ -44,14 +44,14 @@ void modalDelete(BuildContext context, String name, String image, VoidCallback o
                       )
                     ),
                   ),
-                  SizedBox(width: 10.0),
+                  const SizedBox(width: 10.0),
                   TextFrave(
                     text: name,
                     maxLine: 2,
                   ),
                 ],
               ),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               BtnFrave(
                 height: 45,
                 color: Colors.red,

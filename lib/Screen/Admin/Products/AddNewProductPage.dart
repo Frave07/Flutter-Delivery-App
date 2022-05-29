@@ -74,11 +74,11 @@ class _AddNewProductPageState extends State<AddNewProductPage> {
         backgroundColor: Colors.white,
         appBar: AppBar(
             backgroundColor: Colors.white,
-            title: TextFrave(text: 'Add New Product'),
+            title: const TextFrave(text: 'Add New Product'),
             centerTitle: true,
             leadingWidth: 80,
             leading: TextButton(
-              child: TextFrave(text: 'Cancel', color: ColorsFrave.primaryColor, fontSize: 17),
+              child: const TextFrave(text: 'Cancel', color: ColorsFrave.primaryColor, fontSize: 17),
               onPressed: (){
                 Navigator.pop(context);
                 productBloc.add(OnUnSelectCategoryEvent());
@@ -97,44 +97,44 @@ class _AddNewProductPageState extends State<AddNewProductPage> {
                     productBloc.state.idCategory.toString()
                   ));
                 }, 
-                child: TextFrave(text: ' Save ', color: ColorsFrave.primaryColor )
+                child: const TextFrave(text: ' Save ', color: ColorsFrave.primaryColor )
               )
             ],
           ),
         body: Form(
           key: _keyForm,
           child: ListView(
-            physics: BouncingScrollPhysics(),
-            padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+            physics: const BouncingScrollPhysics(),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
             children: [
-              SizedBox(height: 10.0),
-              TextFrave(text: 'Product name'),
-              SizedBox(height: 5.0),
+              const SizedBox(height: 10.0),
+              const TextFrave(text: 'Product name'),
+              const SizedBox(height: 5.0),
               FormFieldFrave(
                 controller: _nameController,
                 hintText: 'Product',
                 validator: RequiredValidator(errorText: 'Name is required'),
               ),
-              SizedBox(height: 20.0),
-              TextFrave(text: 'Product description'),
-              SizedBox(height: 5.0),
+              const SizedBox(height: 20.0),
+              const TextFrave(text: 'Product description'),
+              const SizedBox(height: 5.0),
               FormFieldFrave(
                 controller: _descriptionController,
                 maxLine: 5,
                 validator: RequiredValidator(errorText: 'Description is required'),
               ),
-              SizedBox(height: 20.0),
-              TextFrave(text: 'Price'),
-              SizedBox(height: 5.0),
+              const SizedBox(height: 20.0),
+              const TextFrave(text: 'Price'),
+              const SizedBox(height: 5.0),
               FormFieldFrave(
                 controller: _priceController,
                 hintText: '\$ 0.00',
                 keyboardType: TextInputType.number,
                 validator: RequiredValidator(errorText: 'Price is required'),
               ),
-              SizedBox(height: 20.0),
-              TextFrave(text: 'Pictures'),
-              SizedBox(height: 10.0),
+              const SizedBox(height: 20.0),
+              const TextFrave(text: 'Pictures'),
+              const SizedBox(height: 10.0),
               InkWell(
                 onTap: () async {
     
@@ -156,14 +156,14 @@ class _AddNewProductPageState extends State<AddNewProductPage> {
                     builder: (context, state) 
                       => state.images != null
                         ? ListView.builder(
-                            padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+                            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
                             scrollDirection: Axis.horizontal,
                             itemCount: state.images?.length,
                             itemBuilder: (_, i) 
                               => Container(
                                 height: 100,
                                 width: 120,
-                                margin: EdgeInsets.only(right: 10.0),
+                                margin: const EdgeInsets.only(right: 10.0),
                                 decoration: BoxDecoration(
                                   image: DecorationImage(
                                     image: FileImage(File(state.images![i].path)),
@@ -172,23 +172,23 @@ class _AddNewProductPageState extends State<AddNewProductPage> {
                                 ),
                               )
                           )
-                        : Icon(Icons.wallpaper_rounded, size: 80, color: Colors.grey)
+                        : const Icon(Icons.wallpaper_rounded, size: 80, color: Colors.grey)
                   ),
                 ),
               ),
-              SizedBox(height: 20.0),
-              TextFrave(text: 'Category'),
-              SizedBox(height: 5.0),
+              const SizedBox(height: 20.0),
+              const TextFrave(text: 'Category'),
+              const SizedBox(height: 5.0),
               Container(
                 height: 50,
                 width: MediaQuery.of(context).size.width,
-                padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
+                padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
                 decoration: BoxDecoration(
                   color: Colors.grey[100],
                   borderRadius: BorderRadius.circular(8.0)
                 ),
                 child: Container(
-                  padding: EdgeInsets.only(left: 15.0, right: 15.0),
+                  padding: const EdgeInsets.only(left: 15.0, right: 15.0),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(8.0),
@@ -211,14 +211,14 @@ class _AddNewProductPageState extends State<AddNewProductPage> {
                                 borderRadius: BorderRadius.circular(6.0)
                               ),
                             ),
-                            SizedBox(width: 8.0),
+                            const SizedBox(width: 8.0),
                             BlocBuilder<ProductsBloc, ProductsState>(
                               builder: (context, state) 
                                 => state.category == null || state.category == '' ? TextFrave(text: 'Select Category') : TextFrave(text: state.category!),
                             )
                           ],
                         ),
-                        Icon(Icons.navigate_next_rounded)
+                        const Icon(Icons.navigate_next_rounded)
                       ],
                     ),
                   ),

@@ -35,8 +35,8 @@ class ClientDetailsOrderPage extends StatelessWidget {
 
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context){
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -49,7 +49,7 @@ class ClientDetailsOrderPage extends StatelessWidget {
           onTap: () => Navigator.pop(context),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Icon(Icons.arrow_back_ios_new_rounded, color: ColorsFrave.primaryColor, size: 17),
               TextFrave(text: 'Back', fontSize: 17, color: ColorsFrave.primaryColor )
             ],
@@ -58,7 +58,7 @@ class ClientDetailsOrderPage extends StatelessWidget {
         actions: [
           Container(
             alignment: Alignment.center,
-            margin: EdgeInsets.only(right: 10.0),
+            margin: const EdgeInsets.only(right: 10.0),
             child: TextFrave(
               text: orderClient.status!, 
               fontSize: 16, 
@@ -77,7 +77,7 @@ class ClientDetailsOrderPage extends StatelessWidget {
               builder: (context, snapshot) 
                 => ( !snapshot.hasData )
                     ? Column(
-                      children: [
+                      children: const [
                         ShimmerFrave(),
                         SizedBox(height: 10.0),
                         ShimmerFrave(),
@@ -90,22 +90,22 @@ class ClientDetailsOrderPage extends StatelessWidget {
             )
           ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 10.0),
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    TextFrave(text: 'TOTAL', fontWeight: FontWeight.w500, color: ColorsFrave.primaryColor ),
+                    const TextFrave(text: 'TOTAL', fontWeight: FontWeight.w500, color: ColorsFrave.primaryColor ),
                     TextFrave(text: '\$ ${orderClient.amount}0', fontWeight: FontWeight.w500),
                   ],
                 ),
-                Divider(),
+                const Divider(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    TextFrave(text: 'DELIVERY', fontWeight: FontWeight.w500, color: ColorsFrave.primaryColor, fontSize: 17),
+                    const TextFrave(text: 'DELIVERY', fontWeight: FontWeight.w500, color: ColorsFrave.primaryColor, fontSize: 17),
                     Row(
                       children: [
                         Container(
@@ -117,42 +117,42 @@ class ClientDetailsOrderPage extends StatelessWidget {
                             )
                           ),
                         ),
-                        SizedBox(width: 10.0),
+                        const SizedBox(width: 10.0),
                         TextFrave(text: (orderClient.deliveryId != 0 ) ? orderClient.delivery! : 'Not assigned', fontSize: 17),
                       ],
                     ),
                   ],
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    TextFrave(text: 'DATE', fontWeight: FontWeight.w500, color: ColorsFrave.primaryColor , fontSize: 17),
+                    const TextFrave(text: 'DATE', fontWeight: FontWeight.w500, color: ColorsFrave.primaryColor , fontSize: 17),
                     TextFrave(text: DateFrave.getDateOrder(orderClient.currentDate.toString()), fontSize: 16),
                   ],
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    TextFrave(text: 'ADDRESS', fontWeight: FontWeight.w500, color: ColorsFrave.primaryColor , fontSize: 16),
+                    const TextFrave(text: 'ADDRESS', fontWeight: FontWeight.w500, color: ColorsFrave.primaryColor , fontSize: 16),
                     TextFrave(text: orderClient.reference!, fontSize: 16, maxLine: 1),
                   ],
                 ),
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
               ],
             ),
           ),
           (orderClient.status == 'ON WAY')
-          ? Container(
-            padding: EdgeInsets.all(15.0),
+          ? Padding(
+            padding: const EdgeInsets.all(15.0),
             child: BtnFrave(
               text: 'FOLLOW DELIVERY',
               fontWeight: FontWeight.w500,
               onPressed: () async => accessGps(await Permission.location.request(), context),
             ),
           )
-          : Container()
+          : const SizedBox()
         ],
       ),
     );
@@ -168,12 +168,12 @@ class _ListProductsDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      padding: EdgeInsets.symmetric(horizontal: 10.0),
+      padding: const EdgeInsets.symmetric(horizontal: 10.0),
       itemCount: listProductDetails.length,
       separatorBuilder: (_, index) => Divider(),
       itemBuilder: (_, i) 
-        => Container(
-          padding: EdgeInsets.all(10.0),
+        => Padding(
+          padding: const EdgeInsets.all(10.0),
           child: Row(
             children: [
               Container(
@@ -185,12 +185,12 @@ class _ListProductsDetails extends StatelessWidget {
                   )
                 ),
               ),
-              SizedBox(width: 15.0),
+              const SizedBox(width: 15.0),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextFrave(text: listProductDetails[i].nameProduct!, fontWeight: FontWeight.w500 ),
-                  SizedBox(height: 5.0),
+                  const SizedBox(height: 5.0),
                   TextFrave(text: 'Quantity: ${listProductDetails[i].quantity}', color: Colors.grey, fontSize: 17),
                 ],
               ),

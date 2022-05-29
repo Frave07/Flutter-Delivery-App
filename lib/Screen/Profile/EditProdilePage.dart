@@ -86,7 +86,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
           leading: InkWell(
             onTap: () => Navigator.pop(context),
             child: Row(
-              children: [
+              children: const [
                 SizedBox(width: 10.0),
                 Icon(Icons.arrow_back_ios_new_rounded, color: ColorsFrave.primaryColor, size: 17),
                 TextFrave(text: 'Back', fontSize: 17, color: ColorsFrave.primaryColor )
@@ -108,40 +108,40 @@ class _EditProfilePageState extends State<EditProfilePage> {
           child: Form(
             key: _keyForm,
             child: ListView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
               children: [
-                TextFrave(text: 'Name', color: ColorsFrave.secundaryColor),
-                SizedBox(height: 5.0),
+                const TextFrave(text: 'Name', color: ColorsFrave.secundaryColor),
+                const SizedBox(height: 5.0),
                 FormFieldFrave(
                   controller: _nameController,
                   validator: RequiredValidator(errorText: 'Name is required')
                 ),
-                SizedBox(height: 20.0),
-                TextFrave(text: 'Lastname', color: ColorsFrave.secundaryColor),
-                SizedBox(height: 5.0),
+                const SizedBox(height: 20.0),
+                const TextFrave(text: 'Lastname', color: ColorsFrave.secundaryColor),
+                const SizedBox(height: 5.0),
                 FormFieldFrave(
                   controller: _lastNameController,
                   hintText: 'lastname',
                   validator: RequiredValidator(errorText: 'Lastname is required'),
                 ),
-                SizedBox(height: 20.0),
-                TextFrave(text: 'Phone', color: ColorsFrave.secundaryColor),
-                SizedBox(height: 5.0),
+                const SizedBox(height: 20.0),
+                const TextFrave(text: 'Phone', color: ColorsFrave.secundaryColor),
+                const SizedBox(height: 5.0),
                 FormFieldFrave(
                   controller: _phoneController,
                   keyboardType: TextInputType.number,
                   hintText: '000-000-000',
                   validator: validatedPhoneForm,
                 ),
-                SizedBox(height: 20.0),
-                TextFrave(text: 'Email Address', color: ColorsFrave.secundaryColor),
-                SizedBox(height: 5.0),
+                const SizedBox(height: 20.0),
+                const TextFrave(text: 'Email Address', color: ColorsFrave.secundaryColor),
+                const SizedBox(height: 5.0),
                 FormFieldFrave(
                   controller: _emailController,
                   readOnly: true
                 ),
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
               ],
             )
           ),

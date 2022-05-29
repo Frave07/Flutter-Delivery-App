@@ -10,20 +10,20 @@ class CategoriesAdminPage extends StatelessWidget {
 
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: TextFrave(text: 'Categories'),
+        title: const TextFrave(text: 'Categories'),
         centerTitle: true,
         leadingWidth: 80,
         leading: InkWell(
           onTap: () => Navigator.pop(context),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Icon(Icons.arrow_back_ios_new_rounded, color: ColorsFrave.primaryColor, size: 17),
               TextFrave(text: 'Back', fontSize: 17, color: ColorsFrave.primaryColor,)
             ],
@@ -33,7 +33,7 @@ class CategoriesAdminPage extends StatelessWidget {
         actions: [
           TextButton(
             onPressed: () => Navigator.push(context, routeFrave(page: AddCategoryAdminPage())), 
-            child: TextFrave(text: 'Add', color: ColorsFrave.primaryColor, fontSize: 17)
+            child: const TextFrave(text: 'Add', color: ColorsFrave.primaryColor, fontSize: 17)
           )
         ],
       ),
@@ -43,7 +43,7 @@ class CategoriesAdminPage extends StatelessWidget {
           => !snapshot.hasData 
             ? Center(
               child: Row(
-                children: [
+                children: const [
                   CircularProgressIndicator(),
                   TextFrave(text: 'Loading Categories...')
                 ],
@@ -65,16 +65,16 @@ class _ListCategories extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return ListView.builder(
-      padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-      physics: BouncingScrollPhysics(),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+      physics: const BouncingScrollPhysics(),
       itemCount: listCategory.length,
       itemBuilder: (_, i) 
         => Padding(
-          padding: EdgeInsets.only(bottom: 15.0),
+          padding: const EdgeInsets.only(bottom: 15.0),
           child: Container(
             height: 55,
             width: MediaQuery.of(context).size.width,
-            padding: EdgeInsets.symmetric(horizontal: 20.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
             decoration: BoxDecoration(
               color: Colors.grey[100],
               borderRadius: BorderRadius.circular(10.0)
@@ -90,7 +90,7 @@ class _ListCategories extends StatelessWidget {
                     border: Border.all(color: ColorsFrave.primaryColor, width: 4.5)
                   ),
                 ),
-                SizedBox(width: 20.0),
+                const SizedBox(width: 20.0),
                 TextFrave(text: listCategory[i].category),
               ],
             ),

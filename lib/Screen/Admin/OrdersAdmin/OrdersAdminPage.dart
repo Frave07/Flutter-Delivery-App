@@ -22,14 +22,14 @@ class OrdersAdminPage extends StatelessWidget {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: TextFrave(text: 'List Orders', fontSize: 20),
+          title: const TextFrave(text: 'List Orders', fontSize: 20),
           centerTitle: true,
           leadingWidth: 80,
           leading: InkWell(
             onTap: () => Navigator.pop(context),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Icon(Icons.arrow_back_ios_new_outlined, color: ColorsFrave.primaryColor, size: 17),
                 TextFrave(text: 'Back', color: ColorsFrave.primaryColor, fontSize: 17)
               ],
@@ -55,7 +55,7 @@ class OrdersAdminPage extends StatelessWidget {
                 builder: (context, snapshot) 
                   => ( !snapshot.hasData )
                       ? Column(
-                          children: [
+                          children: const [
                             ShimmerFrave(),
                             SizedBox(height: 10),
                             ShimmerFrave(),
@@ -99,7 +99,7 @@ class _CardOrders extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(15.0),
+      margin: const EdgeInsets.all(15.0),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10.0),
@@ -110,37 +110,37 @@ class _CardOrders extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       child: InkWell(
         onTap: () => Navigator.push(context, routeFrave(page: OrderDetailsPage(order: orderResponse))),
-        child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TextFrave(text: 'ORDER ID: ${orderResponse.orderId}'),
-              Divider(),
-              SizedBox(height: 10.0),
+              const Divider(),
+              const SizedBox(height: 10.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  TextFrave(text: 'Date', fontSize: 16, color: ColorsFrave.secundaryColor),
+                  const TextFrave(text: 'Date', fontSize: 16, color: ColorsFrave.secundaryColor),
                   TextFrave(text: DateFrave.getDateOrder(orderResponse.currentDate.toString()), fontSize: 16),
                 ],
               ),
-              SizedBox(height: 10.0),
+              const SizedBox(height: 10.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  TextFrave(text: 'Client', fontSize:16, color: ColorsFrave.secundaryColor),
+                  const TextFrave(text: 'Client', fontSize:16, color: ColorsFrave.secundaryColor),
                   TextFrave(text: orderResponse.cliente!, fontSize: 16),
                 ],
               ),
-              SizedBox(height: 10.0),
-              TextFrave(text: 'Address shipping', fontSize: 16, color: ColorsFrave.secundaryColor),
-              SizedBox(height: 5.0),
+              const SizedBox(height: 10.0),
+              const TextFrave(text: 'Address shipping', fontSize: 16, color: ColorsFrave.secundaryColor),
+              const SizedBox(height: 5.0),
               Align(
                 alignment: Alignment.centerRight,
                 child: TextFrave(text: orderResponse.reference!, fontSize: 16, maxLine: 2)
               ),
-              SizedBox(height: 5.0),
+              const SizedBox(height: 5.0),
             ],
           ),
         ),

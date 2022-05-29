@@ -4,8 +4,8 @@ part of 'Widgets.dart';
 class ManualMarketMap extends StatelessWidget {
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context){
+
     return BlocBuilder<MylocationmapBloc, MylocationmapState>(
       builder: (context, state) 
         => ( state.existsLocation )
@@ -33,15 +33,15 @@ class ManualMarketMap extends StatelessWidget {
                   maxRadius: 20,
                   backgroundColor: Colors.white,
                   child: IconButton(
-                    icon: Icon(Icons.arrow_back_ios_new_rounded, size: 20, color: ColorsFrave.primaryColor ),
+                    icon: const Icon(Icons.arrow_back_ios_new_rounded, size: 20, color: ColorsFrave.primaryColor ),
                     onPressed: () => Navigator.pop(context),
                   ),
                 ),
                 Container(
                   alignment: Alignment.center,
                   width: MediaQuery.of(context).size.width * .75,  
-                  padding: EdgeInsets.symmetric(vertical: 11.0, horizontal: 8),
-                  margin: EdgeInsets.only(left: 15.0),
+                  padding: const EdgeInsets.symmetric(vertical: 11.0, horizontal: 8),
+                  margin: const EdgeInsets.only(left: 15.0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8.0),
                     color: Colors.white,
@@ -63,7 +63,7 @@ class ManualMarketMap extends StatelessWidget {
           child: Transform.translate(
             offset: Offset(0, -15),
             child: BounceInDownFrave(
-              child: Icon(Icons.location_on, size: 50)
+              child: const Icon(Icons.location_on, size: 50)
             )
           ),
         ),
@@ -72,11 +72,11 @@ class ManualMarketMap extends StatelessWidget {
           bottom: 70,
           left: 40,
           child: MaterialButton(
-            padding: EdgeInsets.symmetric(vertical: 15.0),
+            padding: const EdgeInsets.symmetric(vertical: 15.0),
             minWidth: MediaQuery.of(context).size.width - 80,
             color: ColorsFrave.primaryColor,
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-            child: TextFrave(text: 'Confirm Address', color: Colors.white, fontSize: 17,),
+            child: const TextFrave(text: 'Confirm Address', color: Colors.white, fontSize: 17,),
             onPressed: (){
               if( myLocationBloc.state.addressName != '' ){
                 Navigator.pushReplacement(context, routeFrave(page: AddStreetAddressPage()));

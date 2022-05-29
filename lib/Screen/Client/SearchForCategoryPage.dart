@@ -7,8 +7,7 @@ import 'package:restaurant/Themes/ColorsFrave.dart';
 import 'package:restaurant/Widgets/StaggeredDualView.dart';
 import 'package:restaurant/Widgets/Widgets.dart';
 
-class SearchForCategoryPage extends StatelessWidget
-{
+class SearchForCategoryPage extends StatelessWidget {
 
   final int idCategory;
   final String category;
@@ -16,8 +15,8 @@ class SearchForCategoryPage extends StatelessWidget
   const SearchForCategoryPage({Key? key, required this.idCategory, required this.category }) : super(key: key);
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context){
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -36,7 +35,7 @@ class SearchForCategoryPage extends StatelessWidget
           future: productController.searchPorductsForCategory(idCategory.toString()),
           builder: (context, snapshot) 
             => (!snapshot.hasData) 
-              ? ShimmerFrave()
+              ? const ShimmerFrave()
               : ListProducts(listProduct: snapshot.data! )
           
         ),
@@ -61,7 +60,7 @@ class ListProducts extends StatelessWidget {
           itemCount: listProduct.length,
           itemBuilder: (context, i) 
             => Container(
-              padding: EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               decoration: BoxDecoration(
                 color: Colors.grey[50],
                 borderRadius: BorderRadius.circular(20.0)
@@ -78,7 +77,7 @@ class ListProducts extends StatelessWidget {
                       ),
                     ),
                     TextFrave(text: listProduct[i].nameProduct , textOverflow: TextOverflow.ellipsis, fontWeight: FontWeight.w500, color: ColorsFrave.primaryColor, fontSize: 19 ),
-                    SizedBox(height: 5.0),
+                    const SizedBox(height: 5.0),
                     TextFrave(text: '\$ ${listProduct[i].price.toString()}', fontSize: 16, fontWeight: FontWeight.w500 )
                   ],
                 ),
@@ -89,13 +88,11 @@ class ListProducts extends StatelessWidget {
   }
 
   Widget _withoutProducts(){
-    return Container(
-      child: Column(
-        children: [
-          SvgPicture.asset('Assets/empty-cart.svg', height: 450),
-          TextFrave(text: 'Without products', fontSize: 21, color: ColorsFrave.primaryColor )
-        ],
-      ),
+    return Column(
+      children: [
+        SvgPicture.asset('Assets/empty-cart.svg', height: 450),
+        const TextFrave(text: 'Without products', fontSize: 21, color: ColorsFrave.primaryColor )
+      ],
     );
   }
 

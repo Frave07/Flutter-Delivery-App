@@ -17,6 +17,7 @@ class ListProductsPage extends StatefulWidget {
 }
 
 class _ListProductsPageState extends State<ListProductsPage> {
+
   @override
   Widget build(BuildContext context) {
     return BlocListener<ProductsBloc, ProductsState>(
@@ -44,7 +45,7 @@ class _ListProductsPageState extends State<ListProductsPage> {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: TextFrave(text: 'List Products', fontSize: 19),
+          title: const TextFrave(text: 'List Products', fontSize: 19),
           centerTitle: true,
           leadingWidth: 80,
           elevation: 0,
@@ -52,7 +53,7 @@ class _ListProductsPageState extends State<ListProductsPage> {
             onTap: () => Navigator.pop(context),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Icon(Icons.arrow_back_ios_new_rounded, color: ColorsFrave.primaryColor, size: 17),
                 TextFrave(text: 'Back', fontSize: 17, color: ColorsFrave.primaryColor)
               ],
@@ -61,7 +62,7 @@ class _ListProductsPageState extends State<ListProductsPage> {
           actions: [
             TextButton(
               onPressed: () => Navigator.push(context, routeFrave(page: AddNewProductPage())), 
-              child: TextFrave(text: 'Add', fontSize: 17, color: ColorsFrave.primaryColor)
+              child: const TextFrave(text: 'Add', fontSize: 17, color: ColorsFrave.primaryColor)
             )
           ],
         ),
@@ -69,7 +70,7 @@ class _ListProductsPageState extends State<ListProductsPage> {
           future: productController.listProductsAdmin(),
           builder: (context, snapshot) 
             => ( !snapshot.hasData )
-              ? ShimmerFrave()
+              ? const ShimmerFrave()
               : _GridViewListProduct(listProducts: snapshot.data!)
            
         ),
@@ -88,8 +89,8 @@ class _GridViewListProduct extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return GridView.builder(
-      physics: BouncingScrollPhysics(),
-      padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+      physics: const BouncingScrollPhysics(),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
       itemCount: listProducts.length,
       gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
         maxCrossAxisExtent: 200,

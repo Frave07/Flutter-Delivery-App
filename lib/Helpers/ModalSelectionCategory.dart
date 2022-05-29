@@ -12,7 +12,7 @@ void modalSelectionCategory(BuildContext ctx){
     builder: (ctx)
       => Container(
         height: 470,
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         width: MediaQuery.of(ctx).size.width,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,9 +28,9 @@ void modalSelectionCategory(BuildContext ctx){
                 ),
               ),
             ),
-            SizedBox(height: 20.0),
-            TextFrave(text: 'Select Category', fontWeight: FontWeight.w500, fontSize: 19),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 20.0),
+            const TextFrave(text: 'Select Category', fontWeight: FontWeight.w500, fontSize: 19),
+            const SizedBox(height: 10.0),
             Expanded(
               child: FutureBuilder<List<Category>>(
               future: categoryController.getAllCategories(),
@@ -40,7 +40,7 @@ void modalSelectionCategory(BuildContext ctx){
 
                  return !snapshot.hasData 
                     ? Center(
-                        child: CircularProgressIndicator(),
+                        child: const CircularProgressIndicator(),
                       )
                     : Container(
                       height: 350,
@@ -65,7 +65,7 @@ void modalSelectionCategory(BuildContext ctx){
                                             borderRadius: BorderRadius.circular(6.0)
                                           ),
                                         ),
-                                        SizedBox(width: 10.0),
+                                        const SizedBox(width: 10.0),
                                         TextFrave(text: category![i].category)
                                       ],
                                     ),

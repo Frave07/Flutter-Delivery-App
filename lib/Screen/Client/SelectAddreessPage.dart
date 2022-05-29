@@ -11,19 +11,19 @@ import 'package:restaurant/Widgets/Widgets.dart';
 class SelectAddressPage extends StatelessWidget {
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context){
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: TextFrave(text: 'Select Addresses',),
+        title: const TextFrave(text: 'Select Addresses',),
         backgroundColor: Colors.white,
         elevation: 0,
         centerTitle: true,
         leadingWidth: 80,
         leading: IconButton(
           icon: Row(
-            children: [
+            children: const [
               Icon(Icons.arrow_back_ios_new_rounded, color: ColorsFrave.primaryColor, size: 21),
               TextFrave(text: 'Back', fontSize: 16, color: ColorsFrave.primaryColor )
             ],
@@ -35,7 +35,7 @@ class SelectAddressPage extends StatelessWidget {
           future: userController.getAddresses(),
           builder: (context, snapshot) 
             => (!snapshot.hasData)
-              ? ShimmerFrave()
+              ? const ShimmerFrave()
               : _ListAddresses(listAddress: snapshot.data!)
         ),
     );
@@ -55,13 +55,13 @@ class _ListAddresses extends StatelessWidget {
 
     return ( listAddress.length  != 0 ) 
     ? ListView.builder(
-        padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
         itemCount: listAddress.length,
         itemBuilder: (_, i) 
           => Container(
               height: 70,
               width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.only(bottom: 20.0),
+              margin: const EdgeInsets.only(bottom: 20.0),
               decoration: BoxDecoration(
                 color: Colors.grey[50],
                 borderRadius: BorderRadius.circular(10.0)
@@ -85,14 +85,14 @@ class _WithoutListAddress extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SvgPicture.asset('Assets/my-location.svg', height: 400 ),
-          TextFrave(text: 'Without Address', fontSize: 25, fontWeight: FontWeight.w500, color: ColorsFrave.secundaryColor ),
-          SizedBox(height: 80),
+          const TextFrave(text: 'Without Address', fontSize: 25, fontWeight: FontWeight.w500, color: ColorsFrave.secundaryColor ),
+          const SizedBox(height: 80),
         ],
       ),
     );

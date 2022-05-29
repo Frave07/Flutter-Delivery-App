@@ -61,7 +61,7 @@ class ImagePickerFrave extends StatelessWidget {
                           ),
                         ),
                     )
-                  : CircularProgressIndicator()
+                  : const CircularProgressIndicator()
             ),
            
       ),

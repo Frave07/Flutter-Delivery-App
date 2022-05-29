@@ -39,8 +39,8 @@ class _AddStreetAddressPageState extends State<AddStreetAddressPage> {
   
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context){
+
     final userBloc = BlocProvider.of<UserBloc>(context);
     final myLocationBloc = BlocProvider.of<MylocationmapBloc>(context);
 
@@ -68,13 +68,13 @@ class _AddStreetAddressPageState extends State<AddStreetAddressPage> {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: TextFrave(text: 'New Address', fontSize: 19),
+          title: const TextFrave(text: 'New Address', fontSize: 19),
           centerTitle: true,
           elevation: 0,
           leadingWidth: 80,
             leading: TextButton(
               onPressed: () => Navigator.pushReplacement(context, routeFrave(page: ListAddressesPage())), 
-              child: TextFrave(text: 'Cancel', color: ColorsFrave.primaryColor, fontSize: 17 )
+              child: const TextFrave(text: 'Cancel', color: ColorsFrave.primaryColor, fontSize: 17 )
             ),
             actions: [
               TextButton(
@@ -89,7 +89,7 @@ class _AddStreetAddressPageState extends State<AddStreetAddressPage> {
                     );
                   }
                 }, 
-                child: TextFrave(text: 'Save', color: ColorsFrave.primaryColor, fontSize: 17 )
+                child: const TextFrave(text: 'Save', color: ColorsFrave.primaryColor, fontSize: 17 )
               ),
             ],
         ),
@@ -101,15 +101,15 @@ class _AddStreetAddressPageState extends State<AddStreetAddressPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TextFrave(text: 'Street Address'),
-                  SizedBox(height: 5.0),
+                  const TextFrave(text: 'Street Address'),
+                  const SizedBox(height: 5.0),
                   FormFieldFrave(
                     controller: _streetAddressController,
                     validator: RequiredValidator(errorText: 'Street Address is required'),
                   ),
-                  SizedBox(height: 20.0),
-                  TextFrave(text: 'Reference'),
-                  SizedBox(height: 5.0),
+                  const SizedBox(height: 20.0),
+                  const TextFrave(text: 'Reference'),
+                  const SizedBox(height: 5.0),
                   InkWell(
                     onTap: () async {
                       
@@ -124,7 +124,7 @@ class _AddStreetAddressPageState extends State<AddStreetAddressPage> {
           
                     },
                     child: Container(
-                      padding: EdgeInsets.only(left: 10.0),
+                      padding: const EdgeInsets.only(left: 10.0),
                       alignment: Alignment.centerLeft,
                       height: 50,
                       width: MediaQuery.of(context).size.width,
@@ -141,7 +141,7 @@ class _AddStreetAddressPageState extends State<AddStreetAddressPage> {
                   SizedBox(height: 5.0),
                   Align(
                     alignment: Alignment.centerRight,
-                    child: TextFrave(text: 'Press to select direction', fontSize: 16, color: Colors.grey )
+                    child: const TextFrave(text: 'Press to select direction', fontSize: 16, color: Colors.grey )
                   )
                 ],
               ),
