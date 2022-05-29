@@ -36,7 +36,7 @@ class _MapDeliveryPageState extends State<MapDeliveryPage> with WidgetsBindingOb
     mapDeliveryBloc = BlocProvider.of<MapdeliveryBloc>(context);
     mylocationmapBloc.initialLocation();
     mapDeliveryBloc.initSocketDelivery();
-    WidgetsBinding.instance!.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
    
     super.initState();
   }
@@ -45,7 +45,7 @@ class _MapDeliveryPageState extends State<MapDeliveryPage> with WidgetsBindingOb
   void dispose() {
     mylocationmapBloc.cancelLocation();
     mapDeliveryBloc.disconectSocket();
-    WidgetsBinding.instance!.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
 

@@ -9,8 +9,8 @@ class UrlLauncherFrave {
     var urlGoogleMap =  'https://www.google.com/maps/search/?api=1&query=$latitude,$longitude';
 
     try {
-      bool isLaunched = await launch(url, forceSafariVC: false, forceWebView: false);
-      if(!isLaunched) await launch(urlGoogleMap, forceSafariVC: false, forceWebView: false);
+      bool isLaunched = await launchUrl(Uri.parse(url));
+      if(!isLaunched) await launchUrl(Uri.parse(urlGoogleMap));
     } catch (e) {
       print(e);
     }
@@ -19,8 +19,8 @@ class UrlLauncherFrave {
 
 
   Future<void> makePhoneCall(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
+    if (await canLaunchUrl(Uri.parse(url))) {
+      await launchUrl(Uri.parse(url));
     } else {
       throw 'Could not launch $url';
     }

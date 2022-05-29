@@ -107,7 +107,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                     SizedBox(height: 20.0),
                     TextFrave(text: 'Current Password'),
                     SizedBox(height: 5.0),
-                    _FormFieldFravePassword(
+                    FormFieldFravePassword(
                         controller: _currentPasswordController,
                         isPassword: state.isShowPassword,
                         suffixIcon: IconButton(
@@ -125,7 +125,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                     SizedBox(height: 20.0),
                     TextFrave(text: 'New Password'),
                     SizedBox(height: 5.0),
-                    _FormFieldFravePassword(
+                    FormFieldFravePassword(
                         controller: _newPasswordController,
                         isPassword: state.isNewPassword,
                         suffixIcon: IconButton(
@@ -143,7 +143,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                     SizedBox(height: 20.0),
                     TextFrave(text: 'Repeat Password'),
                     SizedBox(height: 5.0),
-                    _FormFieldFravePassword(
+                    FormFieldFravePassword(
                       controller: _repeatPasswordController,
                       isPassword: state.isRepeatpassword,
                       suffixIcon: IconButton(
@@ -175,7 +175,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
   }
 }
 
-class _FormFieldFravePassword extends StatelessWidget {
+class FormFieldFravePassword extends StatelessWidget {
   
   final TextEditingController? controller;
   final String? hintText;
@@ -186,7 +186,7 @@ class _FormFieldFravePassword extends StatelessWidget {
   final Widget? suffixIcon;
   final FormFieldValidator<String>? validator;
 
-  const _FormFieldFravePassword({ 
+  const FormFieldFravePassword({ 
     this.controller, 
     this.hintText, 
     this.isPassword = false,
