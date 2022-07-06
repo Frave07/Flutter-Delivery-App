@@ -1,3 +1,3 @@
 library restaurant.googlemapsapi;
 
-String googleMapsAPI = "AIzaSyAA6NAaCO_wqNsUjjp86q8JcTBoQZRtW20";
+String googleMapsAPI = "AIzaSyDs7PkTKOmzPIYH5UDOAY_E8kD-QxYHRrQ";

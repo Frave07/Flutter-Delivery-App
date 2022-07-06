@@ -1,16 +1,30 @@
 {
-    "name": "JS ENV",
-    "dockerFile": "Dockerfile",
-    "appPort": [3000],
-    "runArgs": ["-u", "node"],
-    "settings": {
-        "workbench.colorTheme": "Cobalt2",
-        "terminal.intergrated.shell.linux": "/bin/bash"
-    },
-    "postCreateCommand": "npm  install",
-    "extensions": [
-        "esbenp.prettier-vscode",
-        "wesbos.theme.cobalt2",
-    ]
+	"name": "EmmKay",
+	"build": {
+		"dockerfile": "Dockerfile",
+		// Update 'VARIANT' to pick a Node version: 18, 16, 14.
+		// Append -bullseye or -buster to pin to an OS version.
+		// Use -bullseye variants on local arm64/Apple Silicon.
+		
+	},
 
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"dbaeumer.vscode-eslint"
+			]
+		}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "yarn install",
+
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "node"
 }
