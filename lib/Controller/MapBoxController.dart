@@ -7,7 +7,7 @@ import 'package:restaurant/Models/MapBox/DrivingResponse.dart';
 class MapBoxController {
 
   final _url = 'https://api.mapbox.com/directions/v5';
-  final _apikey = 'pk.eyJ1IjoiZnJhdmVkZXYiLCJhIjoiY2t0NTkxem1qMDZhcTJwcW52ZGtkcWpxdyJ9.6_n8u4xkS-FZ7bbgfWRulw';
+  final _apikey = 'pk.eyJ1IjoiYXhlN2JyYXZvIiwiYSI6ImNsNThobjQycjBrdDMzZHVrYWJlbzU3ZG4ifQ.DSVwglNydQDaNEpBharuqA';
 
 
   Future<DrivingResponse> getCoordsOriginAndDestinationDelivery(LatLng origin, LatLng destination) async {
