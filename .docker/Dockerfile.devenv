@@ -1,0 +1,9 @@
+FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:latest
+
+RUN useradd -s /bin/bash -m vscode \
+ && groupadd docker \
+ && usermod -aG docker vscode
+
+USER vscode
+
+
