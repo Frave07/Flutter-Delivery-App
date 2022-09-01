@@ -1,5 +1,5 @@
 name: restaurant
-description: A new Flutter project.
+description: Fraved Restaurante Copyright
 
 publish_to: 'none'
 
@@ -11,44 +11,44 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.4
+  cupertino_icons: ^1.0.5
   font_awesome_flutter: ^10.1.0
-  bloc: ^8.0.3
-  flutter_bloc: ^8.0.1
-  flutter_secure_storage: ^5.0.2
-  http: ^0.13.4
+  bloc: ^8.1.0
+  flutter_bloc: ^8.1.1
+  flutter_secure_storage: ^6.0.0
+  http: ^0.13.5
   google_fonts: ^3.0.1
-  flutter_svg: ^1.1.0
+  flutter_svg: ^1.1.4
   image_picker: ^0.8.5+3
   form_field_validator: ^1.1.0
-  android_intent_plus: ^3.1.1
+  android_intent_plus: ^3.1.1+1
   shimmer: ^2.0.0
   carousel_slider: ^4.1.1
-  geolocator: ^8.2.1
-  google_maps_flutter: ^2.1.6
-  permission_handler: ^9.2.0
-  geocoding: ^2.0.4
+  geolocator: ^9.0.1
+  google_maps_flutter: ^2.2.0
+  permission_handler: ^10.0.0
+  geocoding: ^2.0.5
   intl: ^0.17.0
   polyline_do: ^0.1.0
-  url_launcher: ^6.1.2
+  url_launcher: ^6.1.5
   socket_io_client: 1.0.2
-  firebase_messaging: ^11.4.1
-  firebase_core: ^1.17.1
-  flutter_local_notifications: ^9.5.3+1
+  firebase_messaging: ^13.0.0
+  firebase_core: ^1.21.1
+  flutter_local_notifications: ^9.9.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^2.0.1
 
 flutter:
 
   uses-material-design: true
 
   assets:
-    - Assets/
-    - Assets/Logo/
-    - Assets/svg/
+    - assets/
+    - assets/Logo/
+    - assets/svg/
 
 
   # To add custom fonts to your application, add a fonts section here,
