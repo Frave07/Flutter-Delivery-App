@@ -1,5 +1,7 @@
 # Frave Food - Delivery App
 
+#### In process of improvement......(may present errors)
+
 Frave Developer
 
 ### YouTube Channel

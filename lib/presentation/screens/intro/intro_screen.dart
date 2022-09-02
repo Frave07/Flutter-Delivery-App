@@ -34,7 +34,7 @@ class IntroScreen extends StatelessWidget {
               padding: const EdgeInsets.all(15.0),
               height: 350,
               width: size.width,
-              child: SvgPicture.asset('Assets/delivery.svg'),
+              child: SvgPicture.asset('assets/delivery.svg'),
             ),
             Column(
               children: [
