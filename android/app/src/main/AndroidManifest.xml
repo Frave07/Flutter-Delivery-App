@@ -3,6 +3,8 @@
 
     <!-- Permissions Internet -->
     <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- Permissions Read And Write Storage -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
@@ -29,7 +31,7 @@
     <uses-permission android:name="android.permission.CAMERA"/>
     
    <application
-        android:label="Frave Food"
+        android:label="Fraved Food"
         android:usesCleartextTraffic="true"
         android:requestLegacyExternalStorage="true"
         android:icon="@mipmap/ic_launcher">

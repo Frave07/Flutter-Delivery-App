@@ -1,12 +1,12 @@
 name: restaurant
-description: Fraved Restaurante Copyright
+description: Fraved Restaurante Copyright 2022
 
 publish_to: 'none'
 
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.17.0 <3.0.0"
+  sdk: ">=2.18.0 <3.3.0"
 
 dependencies:
   flutter:
@@ -47,7 +47,7 @@ flutter:
 
   assets:
     - assets/
-    - assets/Logo/
+    - assets/logo/
     - assets/svg/
 
 
