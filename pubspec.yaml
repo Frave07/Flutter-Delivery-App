@@ -6,35 +6,35 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.18.0 <3.3.0"
+  sdk: ">=2.19.4 <3.3.0"
 
 dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.5
-  font_awesome_flutter: ^10.1.0
-  bloc: ^8.1.0
-  flutter_bloc: ^8.1.1
-  flutter_secure_storage: ^6.0.0
+  font_awesome_flutter: ^10.4.0
+  bloc: ^8.1.1
+  flutter_bloc: ^8.1.2
+  flutter_secure_storage: ^8.0.0
   http: ^0.13.5
-  google_fonts: ^3.0.1
-  flutter_svg: ^1.1.4
-  image_picker: ^0.8.5+3
+  google_fonts: ^4.0.4
+  flutter_svg: ^2.0.5
+  image_picker: ^0.8.7+4
   form_field_validator: ^1.1.0
-  android_intent_plus: ^3.1.1+1
+  android_intent_plus: ^3.1.9
   shimmer: ^2.0.0
   carousel_slider: ^4.1.1
-  geolocator: ^9.0.1
-  google_maps_flutter: ^2.2.0
-  permission_handler: ^10.0.0
-  geocoding: ^2.0.5
-  intl: ^0.17.0
+  geolocator: ^9.0.2
+  google_maps_flutter: ^2.2.5
+  permission_handler: ^10.2.0
+  geocoding: ^2.1.0
+  intl: ^0.18.1
   polyline_do: ^0.1.0
-  url_launcher: ^6.1.5
+  url_launcher: ^6.1.10
   socket_io_client: 1.0.2
-  firebase_messaging: ^13.0.0
-  firebase_core: ^1.21.1
-  flutter_local_notifications: ^9.9.0
+  firebase_messaging: ^14.4.1
+  firebase_core: ^2.10.0
+  flutter_local_notifications: ^14.0.0+1
 
 dev_dependencies:
   flutter_test:
